@@ -14,8 +14,8 @@ const SEO = ({ children, location, title, image }) => {
     `);
 
     return (
-        <Helmet titleTemplate={`%s - ${data.sanitySiteSettings.title}`}>
-            <html lang={data.sanitySiteSettings.lang} />
+        <Helmet titleTemplate={`%s - ${data.sanitySiteSettings?.title || 'Title'}`}>
+            <html lang={data.sanitySiteSettings?.lang || 'en'} />
             <title>{title}</title>
 
             {/* Fav Icons */}
@@ -25,14 +25,18 @@ const SEO = ({ children, location, title, image }) => {
             {/* Meta Tags */}
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta charSet="utf-8" />
-            <meta name="description" content={data.sanitySiteSettings.description} />
+            <meta name="description" content={data.sanitySiteSettings?.description || 'Default description'} />
 
             {/* Open Graph */}
             {location && <meta property="og:url" content={location.href} />}
             <meta property="og:image" content={image || '/logo.svg'} />
             <meta property="og:title" content={title} key="ogtitle" />
-            <meta propery="og:site_name" content={data.sanitySiteSettings.title} key="ogsitename" />
-            <meta property="og:description" content={data.sanitySiteSettings.description} key="ogdesc" />
+            <meta propery="og:site_name" content={data.sanitySiteSettings?.title || 'Title'} key="ogsitename" />
+            <meta
+                property="og:description"
+                content={data.sanitySiteSettings?.description || 'Description'}
+                key="ogdesc"
+            />
             {children}
         </Helmet>
     );

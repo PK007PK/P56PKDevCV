@@ -10,16 +10,34 @@ const GlobalStyles = createGlobalStyle`
 } */
 
 html {
-    --red: #ff0000;
-    --black: #393939;
-    --grey: #3A3A3A;
-    --gray: var(--grey);
-    --lightGrey: #e1e1e1;
-    --lightGray: var(--lightGrey);
-    --offWhite: #ededed;
-    --maxWidth: #1000px;
-    --bs: 0 12px 24px 0 rgba(0,0,0,0.99);
-    
+    //Colors
+    --colorDark: #223549;
+    --colorLikeWhite: #F5F5F5;
+    --colorGray: #CDD6DF;
+    --colorActive1: #17A2B8;
+    --colorActive2: #DC3545;
+
+    //Spacings
+    --spacingRegular: 25px;
+    --spacingMedium: 40px;
+    --spacingBig1: 70px;
+    --spacingBig2: 100px;
+
+    //Fons sizes
+    --fontSizeXSmall: 12px;
+    --fontSizeSmall: 14px;
+    --fontSizeRegular: 16px;
+    --fontSizeLead: 20px;
+    --fontSizeBig1: 25px;
+    --fontSizeBig2: 40px;
+    --fontSizeBig3: 50px;
+
+    /* FX */
+    --transitionFast: 0.3s ease-out;
+    --transitionBasic: 0.4s ease-out;
+    --transitionSlow: 0.5s ease-out;
+    --animationBasic: 0.4s;
+
     box-sizing: border-box;
     font-size: 10px;
 }
@@ -39,13 +57,12 @@ a {
     text-decoration: none;
     color: var(--black);
 }
+
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-button {
-    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 
 
 `;

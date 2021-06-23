@@ -5,10 +5,9 @@ import Layout from 'src/components/Layout/Layout';
 import SEO from 'src/components/SEO/SEO';
 import SectionHero from 'src/components/SectionHero/SectionHero';
 
-const IndexPage = ({ data }) => {
-    console.log(data);
-    const imgSrc = data.sanityHomePageData.image.asset.gatsbyImageData;
-    const { title, description } = data.sanityHomePageData;
+const CVPage = ({ data }) => {
+    const imgSrc = data.sanityCvPageData.image.asset.gatsbyImageData;
+    const { title, description } = data.sanityCvPageData;
     return (
         <Layout>
             <SEO
@@ -21,8 +20,8 @@ const IndexPage = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-    query HomeQuery {
-        sanityHomePageData {
+    query CvQuery {
+        sanityCvPageData {
             image {
                 asset {
                     gatsbyImageData
@@ -34,4 +33,4 @@ export const pageQuery = graphql`
     }
 `;
 
-export default IndexPage;
+export default CVPage;

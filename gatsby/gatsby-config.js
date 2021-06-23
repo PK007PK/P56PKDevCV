@@ -16,7 +16,7 @@ export default {
         {
             resolve: `gatsby-source-sanity`,
             options: {
-                projectId: `9311goma`,
+                projectId: `80zrvakd`,
                 token: process.env.SANITY_TOKEN,
                 dataset: `production`,
                 watchMode: true,
@@ -59,12 +59,6 @@ export default {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
         'gatsby-plugin-offline',
-        // {
-        //   resolve: "gatsby-plugin-manifest",
-        //   options: {
-        //     icon: "src/images/icon.png",
-        //   },
-        // },
         'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-plugin-google-analytics',
