@@ -33,9 +33,6 @@ const BlogPage = ({ data, pageContext }) => {
             postsToDisplay = allPosts;
     }
 
-    // console.log("selectionName ", pageContext.selectionName);
-    // console.log("postsToDisplay ", postsToDisplay);
-
     const imgSrc = data.sanityBlogPageData.image.asset.gatsbyImageData;
     const { title, description, github, linkedin, cv, pdf } = data.sanityBlogPageData;
 

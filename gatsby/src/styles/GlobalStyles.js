@@ -16,6 +16,8 @@ html {
     --colorGray: #CDD6DF;
     --colorActive1: #17A2B8;
     --colorActive2: #DC3545;
+    --colorWhite: white;
+    --colorBlack: black;
 
     //Spacings
     --spacingRegular: 25px;

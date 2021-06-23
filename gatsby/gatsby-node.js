@@ -6,7 +6,7 @@ export { createSchemaCustomization } from './src/gatsby/createSchemaCustomizatio
 export { onCreateNode } from './src/gatsby/onCreateNode';
 
 export async function createPages(params) {
-  await Promise.all([createBlogPages(params)]);
-  await Promise.all([turnCategoriesIntoPages(params)]);
-  await Promise.all([turnTagsIntoPages(params)]);
+    await Promise.all([createBlogPages(params)]);
+    await Promise.all([turnCategoriesIntoPages(params)]);
+    await Promise.all([turnTagsIntoPages(params)]);
 }
