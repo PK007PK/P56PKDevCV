@@ -37,7 +37,7 @@ const BlogPage = ({ data, pageContext }) => {
     // console.log("postsToDisplay ", postsToDisplay);
 
     const imgSrc = data.sanityBlogPageData.image.asset.gatsbyImageData;
-    const { title, description } = data.sanityBlogPageData;
+    const { title, description, github, linkedin, cv, pdf } = data.sanityBlogPageData;
 
     const DisplayPosts = () => (
         <ul style={{ listStyle: `none`, paddingLeft: 0 }}>
@@ -62,7 +62,15 @@ const BlogPage = ({ data, pageContext }) => {
                     pageContext.currentPage ? `| ${pageContext.currentPage}` : ''
                 }`}
             />
-            <SectionHero imgSrc={imgSrc} title={title} description={description} />
+            <SectionHero
+                imgSrc={imgSrc}
+                title={title}
+                description={description}
+                github={github}
+                linkedin={linkedin}
+                cv={cv}
+                pdf={pdf}
+            />
             <h1>Blog page</h1>
             <CategoryFilter />
             <TagsFilter />
@@ -93,6 +101,10 @@ export const pageQuery = graphql`
             }
             title
             description
+            github
+            linkedin
+            cv
+            pdf
         }
         category: allSanityBlogPosts(
             limit: $pageSize

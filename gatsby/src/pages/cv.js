@@ -7,14 +7,22 @@ import SectionHero from 'src/components/SectionHero/SectionHero';
 
 const CVPage = ({ data }) => {
     const imgSrc = data.sanityCvPageData.image.asset.gatsbyImageData;
-    const { title, description } = data.sanityCvPageData;
+    const { title, description, github, linkedin, cv, pdf } = data.sanityCvPageData;
     return (
         <Layout>
             <SEO
             // title={content.frontmatter.title}
             // description={content.frontmatter.description || content.excerpt}
             />
-            <SectionHero imgSrc={imgSrc} title={title} description={description} />
+            <SectionHero
+                imgSrc={imgSrc}
+                title={title}
+                description={description}
+                github={github}
+                linkedin={linkedin}
+                cv={cv}
+                pdf={pdf}
+            />
         </Layout>
     );
 };
@@ -29,6 +37,10 @@ export const pageQuery = graphql`
             }
             title
             description
+            github
+            linkedin
+            cv
+            pdf
         }
     }
 `;

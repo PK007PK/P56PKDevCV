@@ -4,7 +4,7 @@ import SectionHeroTxtComponent from 'src/components/SectionHeroTxtComponent/Sect
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import { SectionHeroStyles } from './SectionHero.styles';
 
-const SectionHero = ({ imgSrc, title, description }) => (
+const SectionHero = ({ imgSrc, title, description, linkedin, github, cv, pdf }) => (
     <SectionHeroStyles>
         <GatsbyImage
             image={imgSrc}
@@ -17,7 +17,14 @@ const SectionHero = ({ imgSrc, title, description }) => (
         <div className="imgWrapper" />
         <div className="txtWrapper">
             <BootsContainer>
-                <SectionHeroTxtComponent title={title} description={description} />
+                <SectionHeroTxtComponent
+                    title={title}
+                    description={description}
+                    linkedin={linkedin}
+                    github={github}
+                    cv={cv}
+                    pdf={pdf}
+                />
             </BootsContainer>
         </div>
     </SectionHeroStyles>

@@ -6,16 +6,24 @@ import SEO from 'src/components/SEO/SEO';
 import SectionHero from 'src/components/SectionHero/SectionHero';
 
 const IndexPage = ({ data }) => {
-    console.log(data);
     const imgSrc = data.sanityHomePageData.image.asset.gatsbyImageData;
-    const { title, description } = data.sanityHomePageData;
+    const { title, description, github, linkedin, cv, pdf } = data.sanityHomePageData;
+    console.log(linkedin);
     return (
         <Layout>
             <SEO
             // title={content.frontmatter.title}
             // description={content.frontmatter.description || content.excerpt}
             />
-            <SectionHero imgSrc={imgSrc} title={title} description={description} />
+            <SectionHero
+                imgSrc={imgSrc}
+                title={title}
+                description={description}
+                github={github}
+                linkedin={linkedin}
+                cv={cv}
+                pdf={pdf}
+            />
         </Layout>
     );
 };
@@ -30,6 +38,10 @@ export const pageQuery = graphql`
             }
             title
             description
+            github
+            linkedin
+            cv
+            pdf
         }
     }
 `;
