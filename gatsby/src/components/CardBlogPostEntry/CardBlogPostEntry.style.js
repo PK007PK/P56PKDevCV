@@ -29,6 +29,7 @@ export const CardBlogPostEntryStyles = styled.div`
     }
 
     .logoWrapper {
+        width: 100%;
         /* 1920 / 942 */
         aspect-ratio: 1920/942;
         display: flex;

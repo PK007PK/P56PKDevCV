@@ -11,6 +11,7 @@ const colors = `
 `;
 
 const spacings = `
+    --spacingSmall: 15px;
     --spacingRegular: 25px;
     --spacingMedium: 40px;
     --spacingBig1: 70px;

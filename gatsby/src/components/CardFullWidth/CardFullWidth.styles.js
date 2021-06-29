@@ -3,24 +3,36 @@ import { Sling } from 'hamburger-react';
 
 export const CardFullwidthStyles = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: var(--colorWhite);
 
+    ${({ theme }) => theme.media.smAbove} {
+        flex-direction: row;
+    }
+
     .background {
-        width: 66%;
         box-shadow: ${({ theme }) => theme.elevation.dp8};
+
+        ${({ theme }) => theme.media.smAbove} {
+            width: 66%;
+        }
     }
 
     .txtWrapper {
-        width: 34%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         box-shadow: ${({ theme }) => theme.elevation.dp1};
+
+        ${({ theme }) => theme.media.smAbove} {
+            width: 34%;
+        }
     }
 
     .titleBar {
         display: flex;
+        line-height: 1.2;
         justify-content: space-between;
         background-color: var(--colorGray);
         height: 75px;

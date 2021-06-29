@@ -9,8 +9,11 @@ export const NavbarStyles = styled.div`
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    margin: var(--spacingMedium);
+    margin: var(--spacingRegular) 10px;
 
+    ${({ theme }) => theme.media.xsAbove} {
+        margin: var(--spacingMedium);
+    }
     .logo,
     .burger {
         z-index: 10;

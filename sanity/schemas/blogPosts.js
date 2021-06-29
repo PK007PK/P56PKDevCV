@@ -22,6 +22,21 @@ export default {
       },
     },
     {
+      name: 'github',
+      title: 'Github page link',
+      type: 'string',
+    },
+    {
+      name: 'live',
+      title: 'Live page link',
+      type: 'string',
+    },
+    {
+      name: 'figma',
+      title: 'Figma page link',
+      type: 'string',
+    },
+    {
       name: 'categories',
       title: 'Post categories',
       type: 'array',
@@ -55,12 +70,6 @@ export default {
       name: 'lead',
       type: 'text',
       rows: 3,
-    },
-    {
-      title: 'Rich text',
-      name: 'richText',
-      type: 'array',
-      of: [{ type: 'block' }, { type: 'image' }],
     },
   ],
   preview: {

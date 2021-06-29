@@ -5,9 +5,14 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // Then we give our schema to the builder and provide the result to Sanity
 
 import siteSettings from './siteSettings';
+import menuData from './menuData';
+import homePageData from './homePageData';
+import blogPageData from './blogPageData';
+import cvPageData from './cvPageData';
 import blogPosts from './blogPosts';
 import blogPostsCategories from './blogPostsCategories';
 import blogPostsTags from './blogPostsTags';
+import menuItem from './menuItem';
 
 export default createSchema({
   // We name our schema
@@ -16,8 +21,13 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     siteSettings,
+    menuData,
+    homePageData,
+    blogPageData,
+    cvPageData,
     blogPosts,
     blogPostsCategories,
     blogPostsTags,
+    menuItem,
   ]),
 });

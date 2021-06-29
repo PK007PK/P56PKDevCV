@@ -20,41 +20,45 @@ const SectionHero = ({
     currentPage,
     skip,
     base,
-}) => (
-    <SectionHeroStyles>
-        <GatsbyImage
-            image={imgSrc}
-            placeholder="blurred"
-            alt="Abstract background decoration"
-            formats={['auto', 'webp']}
-            quality={50}
-            className="backImg"
+}) => {
+    const blogPagination = blog && (
+        <Pagination
+            className="blogPagination"
+            pageSize={pageSize}
+            totalCount={totalCount}
+            currentPage={currentPage}
+            skip={skip}
+            base={base}
         />
-        <div className="imgWrapper" />
-        <div className="txtWrapper">
-            <BootsContainer>
-                <SectionHeroTxtComponent
-                    title={title}
-                    description={description}
-                    linkedin={linkedin}
-                    github={github}
-                    cv={cv}
-                    pdf={pdf}
-                />
-                {blog && <FilterCategory />}
-            </BootsContainer>
-        </div>
-        {blog && (
-            <Pagination
-                className="blogPagination"
-                pageSize={pageSize}
-                totalCount={totalCount}
-                currentPage={currentPage}
-                skip={skip}
-                base={base}
+    );
+
+    return (
+        <SectionHeroStyles>
+            <GatsbyImage
+                image={imgSrc}
+                placeholder="blurred"
+                alt="Abstract background decoration"
+                formats={['auto', 'webp']}
+                quality={50}
+                className="backImg"
             />
-        )}
-    </SectionHeroStyles>
-);
+            <div className="imgWrapper" />
+            <div className="txtWrapper">
+                <BootsContainer>
+                    <SectionHeroTxtComponent
+                        title={title}
+                        description={description}
+                        linkedin={linkedin}
+                        github={github}
+                        cv={cv}
+                        pdf={pdf}
+                    />
+                    {blog && <FilterCategory />}
+                </BootsContainer>
+            </div>
+            {blogPagination}
+        </SectionHeroStyles>
+    );
+};
 
 export default SectionHero;

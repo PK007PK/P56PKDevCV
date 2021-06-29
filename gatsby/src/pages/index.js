@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
                 pdf={pdf}
             />
             <SectionLatestProjects />
-            <SectionCodeWars />
+            {/* <SectionCodeWars /> */}
         </Layout>
     );
 };
