@@ -1,5 +1,5 @@
 import React from 'react';
-import CardFullWidth from 'src/components/CardFullWidth/CardFullWidth';
+import CardBlogPostEntry from 'src/components/CardBlogPostEntry/CardBlogPostEntry';
 import { CardFullWidthWrapperStyles } from './CardFullWidthWrapper.styles';
 
 const CardFullWidthWrapper = ({ data }) => (
@@ -7,7 +7,7 @@ const CardFullWidthWrapper = ({ data }) => (
         {data.allSanityBlogPosts.nodes.map((item) => {
             const { name, github, live, figma, tags, lead, image } = item;
             return (
-                <CardFullWidth
+                <CardBlogPostEntry
                     key={name}
                     name={name}
                     github={github}

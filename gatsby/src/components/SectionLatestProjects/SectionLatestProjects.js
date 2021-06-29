@@ -36,7 +36,7 @@ const SectionLatestProjects = () => {
     `);
     return (
         <SectionLatestProjectsStyles>
-            <BootsContainer>
+            <BootsContainer noXl="true">
                 <Heading tag="h2">Latest projects</Heading>
                 <CardFullWidthWrapper data={data} />
                 <BootsRow className="buttonBar">

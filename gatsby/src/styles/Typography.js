@@ -19,10 +19,16 @@ const Typography = createGlobalStyle`
   h2 {
     font-size: var(--fontSizeBig2);
     margin-bottom: var(--spacingRegular);
+    
   }
 
   h3 {
-    font-size: var(--fontSizeBig1);
+    font-size: var(--fontSizeLead);
+    line-height: 1.25;
+
+    ${({ theme }) => theme.media.smAbove} {
+      font-size: var(--fontSizeBig1);
+        }
   }
 
   a {

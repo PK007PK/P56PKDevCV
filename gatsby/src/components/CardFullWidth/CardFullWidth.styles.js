@@ -3,7 +3,7 @@ import { Sling } from 'hamburger-react';
 
 export const CardFullwidthStyles = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     background-color: var(--colorWhite);
 
@@ -13,9 +13,19 @@ export const CardFullwidthStyles = styled.div`
 
     .background {
         box-shadow: ${({ theme }) => theme.elevation.dp8};
-
+        width: 100%;
         ${({ theme }) => theme.media.smAbove} {
             width: 66%;
+        }
+    }
+
+    .hamburgerWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ${({ theme }) => theme.media.smAbove} {
+            display: none;
         }
     }
 
@@ -24,7 +34,7 @@ export const CardFullwidthStyles = styled.div`
         flex-direction: column;
         justify-content: space-between;
         box-shadow: ${({ theme }) => theme.elevation.dp1};
-
+        width: 100%;
         ${({ theme }) => theme.media.smAbove} {
             width: 34%;
         }
@@ -35,9 +45,13 @@ export const CardFullwidthStyles = styled.div`
         line-height: 1.2;
         justify-content: space-between;
         background-color: var(--colorGray);
-        height: 75px;
+        height: 85px;
         align-items: center;
         padding: 0 var(--spacingRegular);
+
+        ${({ theme }) => theme.media.smAbove} {
+            height: 75px;
+        }
     }
 
     .contentBox {
