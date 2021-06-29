@@ -15,4 +15,15 @@ export const NavbarStyles = styled.div`
     .burger {
         z-index: 10;
     }
+
+    .desktopLinksWrapper {
+        display: none;
+
+        ${({ theme }) => theme.media.mdAbove} {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            margin-right: var(--spacingBig1);
+        }
+    }
 `;

@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const SectionHeroTxtComponentStyles = styled.div`
     .title {
-        color: var(--colorActive1);
-        font-family: 'Montsserat', sans-serif;
+        color: var(--colorDark);
         font-size: var(-fontSizeBig3);
         max-width: 50%;
         line-height: 120%;

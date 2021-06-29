@@ -1,16 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
-/* @font-face {
-    font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2')
-    format('woff2');
-    font-weight: normal;
-    font-style: normal;
-} */
-
-html {
-    //Colors
+const colors = `
     --colorDark: #223549;
     --colorLikeWhite: #F5F5F5;
     --colorGray: #CDD6DF;
@@ -18,14 +8,16 @@ html {
     --colorActive2: #DC3545;
     --colorWhite: white;
     --colorBlack: black;
+`;
 
-    //Spacings
+const spacings = `
     --spacingRegular: 25px;
     --spacingMedium: 40px;
     --spacingBig1: 70px;
     --spacingBig2: 100px;
+`;
 
-    //Fons sizes
+const fontSizes = `
     --fontSizeXSmall: 12px;
     --fontSizeSmall: 14px;
     --fontSizeRegular: 16px;
@@ -33,12 +25,22 @@ html {
     --fontSizeBig1: 25px;
     --fontSizeBig2: 40px;
     --fontSizeBig3: 50px;
+`;
 
-    /* FX */
+const fx = `
     --transitionFast: 0.3s ease-out;
     --transitionBasic: 0.4s ease-out;
     --transitionSlow: 0.5s ease-out;
     --animationBasic: 0.4s;
+`;
+
+const GlobalStyles = createGlobalStyle`
+
+html {
+    ${colors}
+    ${spacings}
+    ${fontSizes}
+    ${fx}
 
     box-sizing: border-box;
     font-size: 10px;
@@ -63,8 +65,6 @@ a {
 a:hover {
     text-decoration: none;
 }
-
-
 
 
 `;

@@ -65,7 +65,6 @@ export const pageQuery = graphql`
             id
             date
             name
-            _rawRichText
         }
         previous: sanityBlogPosts(id: { eq: $previousPostId }) {
             slug {

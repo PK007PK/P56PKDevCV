@@ -1,26 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-import { CardFullwidthStyles } from './CardFullWidth.styles';
+import Logo from 'src/components/Logo/Logo';
+import { Squeeze as Hamburger } from 'hamburger-react';
+import { CardBlogPostEntryStyles } from './CardBlogPostEntry.style';
 
-const CardFullwidth = ({ name, github, live, figma, tags, lead, image }) => (
-    <CardFullwidthStyles>
+const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image }) => {
+    const [isOpen, setOpen] = useState(false);
+
+    const picture = image ? (
         <GatsbyImage
-            className="background"
+            className="backgroundImg"
             image={image}
             placeholder="blurred"
             alt={name}
             formats={['auto', 'webp']}
             quality={50}
         />
-        <div className="txtWrapper">
-            <div className="titleBar">
+    ) : (
+        <div className="logoWrapper">
+            <Logo />
+        </div>
+    );
+
+    const moreInfo = (
+        <div className="logoWrapper infoWrapper">
+            <p>{lead}</p>
+        </div>
+    );
+
+    return (
+        <CardBlogPostEntryStyles>
+            <div className="titleWrapper">
                 <h3>{name}</h3>
+                <Hamburger
+                    toggled={isOpen}
+                    toggle={setOpen}
+                    size={20}
+                    duration={0.2}
+                    hideOutline={false}
+                    label="Show card details"
+                    color="#DC3545"
+                />
             </div>
-            <div className="contentBox">
-                <p>{lead}</p>
-            </div>
-            <div className="bottomBar">
+            {isOpen ? moreInfo : picture}
+
+            <div className="linkWrapper">
                 {github && (
                     <a href={github} target="blank" rel="noopener noreferrer">
                         GitHub
@@ -46,8 +71,8 @@ const CardFullwidth = ({ name, github, live, figma, tags, lead, image }) => (
                     </a>
                 )}
             </div>
-        </div>
-    </CardFullwidthStyles>
-);
+        </CardBlogPostEntryStyles>
+    );
+};
 
-export default CardFullwidth;
+export default CardBlogPostEntry;

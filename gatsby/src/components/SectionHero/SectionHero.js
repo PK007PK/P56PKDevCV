@@ -2,9 +2,25 @@ import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import SectionHeroTxtComponent from 'src/components/SectionHeroTxtComponent/SectionHeroTxtComponent';
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
+import FilterCategory from 'src/components/FilterCategory/FilterCategory';
 import { SectionHeroStyles } from './SectionHero.styles';
+import Pagination from '../Pagination/Pagination';
 
-const SectionHero = ({ imgSrc, title, description, linkedin, github, cv, pdf }) => (
+const SectionHero = ({
+    imgSrc,
+    title,
+    description,
+    linkedin,
+    github,
+    cv,
+    pdf,
+    blog,
+    pageSize,
+    totalCount,
+    currentPage,
+    skip,
+    base,
+}) => (
     <SectionHeroStyles>
         <GatsbyImage
             image={imgSrc}
@@ -25,8 +41,19 @@ const SectionHero = ({ imgSrc, title, description, linkedin, github, cv, pdf }) 
                     cv={cv}
                     pdf={pdf}
                 />
+                {blog && <FilterCategory />}
             </BootsContainer>
         </div>
+        {blog && (
+            <Pagination
+                className="blogPagination"
+                pageSize={pageSize}
+                totalCount={totalCount}
+                currentPage={currentPage}
+                skip={skip}
+                base={base}
+            />
+        )}
     </SectionHeroStyles>
 );
 

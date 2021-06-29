@@ -3,12 +3,12 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from 'src/components/Layout/Layout';
 import SEO from 'src/components/SEO/SEO';
-import CategoryFilter from 'src/components/CategoryFilter/CategoryFilter';
-import TagsFilter from 'src/components/TagsFilter/TagsFilter';
 import Pagination from 'src/components/Pagination/Pagination';
 import SectionHero from 'src/components/SectionHero/SectionHero';
-
+import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import projectConfig from 'src/projectConfig';
+import CardBlogPostEntryWrapper from 'src/components/CardBlogPostEntryWrapper/CardBlogPostEntryWrapper';
+import Heading from '../components/Heading/Heading';
 
 const BlogPage = ({ data, pageContext }) => {
     if (pageContext.dirName === undefined) {
@@ -36,22 +36,13 @@ const BlogPage = ({ data, pageContext }) => {
     const imgSrc = data.sanityBlogPageData.image.asset.gatsbyImageData;
     const { title, description, github, linkedin, cv, pdf } = data.sanityBlogPageData;
 
-    const DisplayPosts = () => (
-        <ul style={{ listStyle: `none`, paddingLeft: 0 }}>
-            {postsToDisplay.nodes
-                .filter((post) => post.date !== null)
-                .map((post) => (
-                    <li key={post.slug.current}>
-                        <h3>{post.name}</h3>
-                        <p>{post.lead}</p>
-                        <Link to={`/${post.slug.current}`} itemProp="url">
-                            More
-                        </Link>
-                    </li>
-                ))}
-        </ul>
+    const heading = (
+        <BootsContainer>
+            <Heading tag="h2">
+                {pageContext.dirName === '/blog' ? 'All posts' : pageContext.dirName.substring(1)}
+            </Heading>
+        </BootsContainer>
     );
-
     return (
         <Layout>
             <SEO
@@ -67,18 +58,16 @@ const BlogPage = ({ data, pageContext }) => {
                 linkedin={linkedin}
                 cv={cv}
                 pdf={pdf}
-            />
-            <h1>Blog page</h1>
-            <CategoryFilter />
-            <TagsFilter />
-            <DisplayPosts />
-            <Pagination
+                blog="true"
                 pageSize={projectConfig.pagesAmountInSet}
                 totalCount={postsToDisplay.totalCount}
                 currentPage={pageContext.currentPage || 1}
                 skip={pageContext.skip}
                 base={pageContext.dirName}
             />
+            {heading}
+            <CardBlogPostEntryWrapper postsToDisplay={postsToDisplay} />
+            <Pagination />
         </Layout>
     );
 };
@@ -111,12 +100,20 @@ export const pageQuery = graphql`
         ) {
             totalCount
             nodes {
+                name
+                github
+                live
+                figma
+                lead
+                date(formatString: "")
                 slug {
                     current
                 }
-                date
-                name
-                lead
+                image {
+                    asset {
+                        gatsbyImageData
+                    }
+                }
             }
         }
         tag: allSanityBlogPosts(
@@ -127,23 +124,39 @@ export const pageQuery = graphql`
         ) {
             totalCount
             nodes {
+                name
+                github
+                live
+                figma
+                lead
+                date(formatString: "")
                 slug {
                     current
                 }
-                date
-                name
-                lead
+                image {
+                    asset {
+                        gatsbyImageData
+                    }
+                }
             }
         }
         allPosts: allSanityBlogPosts(limit: $pageSize, skip: $skip, sort: { order: DESC, fields: date }) {
             totalCount
             nodes {
+                name
+                github
+                live
+                figma
+                lead
+                date(formatString: "")
                 slug {
                     current
                 }
-                date
-                name
-                lead
+                image {
+                    asset {
+                        gatsbyImageData
+                    }
+                }
             }
         }
     }

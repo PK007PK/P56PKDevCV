@@ -49,4 +49,16 @@ export const SectionHeroStyles = styled.section`
         display: flex;
         align-items: center;
     }
+
+    .blogPagination {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+        margin: var(--spacingBig1) var(--spacingMedium);
+    }
 `;

@@ -4,12 +4,11 @@ import { FaCheckDouble as LogoIcon } from '@react-icons/all-files/fa/FaCheckDoub
 
 const LogoStyles = styled.div`
     display: flex;
-    /* align-items: center; */
+    flex-shrink: 0;
 
     .icon {
-        /* width: 40px; */
         font-size: 28px;
-        color: var(--colorActive1);
+        color: var(--colorDark);
         margin-right: 10px;
     }
 
@@ -17,9 +16,10 @@ const LogoStyles = styled.div`
     }
 
     .name {
-        font-family: 'Montsserat', sans-serif;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
         font-size: 25px;
-        letter-spacing: -0.4px;
+        letter-spacing: -0.6px;
         line-height: 1;
         margin-bottom: 5px;
     }
@@ -28,7 +28,7 @@ const LogoStyles = styled.div`
         font-family: 'Raleway', sans-serif;
         font-size: 10px;
         line-height: 1;
-        letter-spacing: 0.4px;
+        letter-spacing: 0.6px;
     }
 `;
 

@@ -20,11 +20,11 @@ const SectionHeroTxtComponent = ({ title, description, linkedin, github, cv, pdf
                 </Button>
             )}
             {cv && (
-                <Link to="/cv">
-                    <Button dark>CV</Button>
-                </Link>
+                <Button as={Link} to="/cv" dark="true">
+                    CV
+                </Button>
             )}
-            {pdf && <Button dark>PDF</Button>}
+            {pdf && <Button dark="true">PDF</Button>}
         </div>
     </SectionHeroTxtComponentStyles>
 );

@@ -5,6 +5,7 @@ import { Sling as Hamburger } from 'hamburger-react';
 import MenuDropDown from 'src/components/MenuDropDown/MenuDropDown';
 import Logo from 'src/components/Logo/Logo';
 import { NavbarStyles } from './Navbar.styles';
+import MenuItemsWrapper from '../MenuItemsWrapper/MenuItemsWrapper';
 
 export default function Navbar() {
     const { toogleIsMenuActive, isMenuActive, diseableMenu } = useContext(AppContext);
@@ -13,6 +14,9 @@ export default function Navbar() {
             <Link to="/" className="logo" onClick={diseableMenu}>
                 <Logo />
             </Link>
+            <div className="desktopLinksWrapper">
+                <MenuItemsWrapper />
+            </div>
             <div className="burger">
                 <Hamburger toggled={isMenuActive} toggle={toogleIsMenuActive} />
             </div>
