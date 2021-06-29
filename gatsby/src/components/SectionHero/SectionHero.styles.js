@@ -59,6 +59,10 @@ export const SectionHeroStyles = styled.section`
         justify-content: space-between;
         align-items: center;
         z-index: 10;
-        margin: var(--spacingBig1) var(--spacingMedium);
+        margin: var(--spacingMedium) var(--spacingSmall);
+
+        ${({ theme }) => theme.media.smAbove} {
+            margin: var(--spacingBig1) var(--spacingMedium);
+        }
     }
 `;
