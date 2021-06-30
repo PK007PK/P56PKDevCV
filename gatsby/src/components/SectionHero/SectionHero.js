@@ -20,6 +20,7 @@ const SectionHero = ({
     currentPage,
     skip,
     base,
+    max,
 }) => {
     const blogPagination = blog && (
         <Pagination
@@ -33,7 +34,7 @@ const SectionHero = ({
     );
 
     return (
-        <SectionHeroStyles>
+        <SectionHeroStyles max={max}>
             <GatsbyImage
                 image={imgSrc}
                 placeholder="blurred"

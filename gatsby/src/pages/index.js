@@ -25,9 +25,10 @@ const IndexPage = ({ data }) => {
                 linkedin={linkedin}
                 cv={cv}
                 pdf={pdf}
+                max="true"
             />
             <SectionLatestProjects />
-            {/* <SectionCodeWars /> */}
+            <SectionCodeWars />
         </Layout>
     );
 };
