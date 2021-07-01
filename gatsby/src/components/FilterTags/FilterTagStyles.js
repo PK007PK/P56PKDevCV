@@ -6,4 +6,7 @@ export const FilterTagStyles = styled.div`
     & > *:not(:last-child) {
         margin-right: var(--spacingRegular);
     }
+    & > *:hover {
+        color: var(--colorActive1);
+    }
 `;

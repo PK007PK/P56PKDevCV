@@ -32,6 +32,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'test',
+      title: 'Show test link',
+      type: 'boolean',
+    },
+    {
       name: 'figma',
       title: 'Figma page link',
       type: 'string',

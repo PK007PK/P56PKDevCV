@@ -18,6 +18,7 @@ const CardBlogPostEntryWrapper = ({ postsToDisplay }) => (
                                 name={post.name}
                                 github={post.github}
                                 live={post.live}
+                                test={post.test}
                                 figma={post.figma}
                                 tags={post.tags}
                                 lead={post.lead}

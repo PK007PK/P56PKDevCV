@@ -5,9 +5,10 @@ import { FilterTagStyles } from './FilterTagStyles';
 export default function FilterTags({ className }) {
     const data = useStaticQuery(graphql`
         query {
-            allSanityBlogPostsTags(sort: { order: ASC, fields: name }) {
+            allSanityBlogPostsTags(sort: { order: ASC, fields: position }) {
                 nodes {
                     name
+                    position
                     slug {
                         current
                     }

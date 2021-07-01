@@ -5,9 +5,10 @@ import { FilterCategoryStyles } from './FilterCategory.style';
 export default function FilterCategory({ className }) {
     const data = useStaticQuery(graphql`
         {
-            allSanityBlogPostsCategories(sort: { order: ASC, fields: name }) {
+            allSanityBlogPostsCategories(sort: { order: ASC, fields: position }) {
                 nodes {
                     name
+                    position
                     slug {
                         current
                     }

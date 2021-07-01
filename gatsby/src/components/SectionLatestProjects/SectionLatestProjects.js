@@ -19,6 +19,7 @@ const SectionLatestProjects = () => {
                     name
                     github
                     live
+                    test
                     figma
                     lead
                     date(formatString: "")

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from 'src/components/Layout/Layout';
 import SEO from 'src/components/SEO/SEO';
@@ -8,6 +8,7 @@ import SectionHero from 'src/components/SectionHero/SectionHero';
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import projectConfig from 'src/projectConfig';
 import CardBlogPostEntryWrapper from 'src/components/CardBlogPostEntryWrapper/CardBlogPostEntryWrapper';
+import styled from 'styled-components';
 import Heading from '../components/Heading/Heading';
 
 const BlogPage = ({ data, pageContext }) => {
@@ -43,6 +44,26 @@ const BlogPage = ({ data, pageContext }) => {
             </Heading>
         </BootsContainer>
     );
+
+    const PaginationStyles = styled.div`
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--spacingMedium);
+    `;
+
+    const paginationBottom = (
+        <PaginationStyles>
+            <Pagination
+                className="paginationBottom"
+                pageSize={projectConfig.pagesAmountInSet}
+                totalCount={postsToDisplay.totalCount}
+                currentPage={pageContext.currentPage || 1}
+                skip={pageContext.skip}
+                base={pageContext.dirName}
+            />
+        </PaginationStyles>
+    );
+
     return (
         <Layout>
             <SEO
@@ -67,7 +88,7 @@ const BlogPage = ({ data, pageContext }) => {
             />
             {heading}
             <CardBlogPostEntryWrapper postsToDisplay={postsToDisplay} />
-            <Pagination />
+            {paginationBottom}
         </Layout>
     );
 };
@@ -103,7 +124,11 @@ export const pageQuery = graphql`
                 name
                 github
                 live
+                test
                 figma
+                tags {
+                    name
+                }
                 lead
                 date(formatString: "")
                 slug {
@@ -127,7 +152,11 @@ export const pageQuery = graphql`
                 name
                 github
                 live
+                test
                 figma
+                tags {
+                    name
+                }
                 lead
                 date(formatString: "")
                 slug {
@@ -146,7 +175,11 @@ export const pageQuery = graphql`
                 name
                 github
                 live
+                test
                 figma
+                tags {
+                    name
+                }
                 lead
                 date(formatString: "")
                 slug {

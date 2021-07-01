@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const PaginationStyles = styled.div`
     margin-top: var(--spacingRegular);
-
+    display: flex;
+    flex-wrap: wrap;
     & > * {
         display: inline-block;
         padding: 10px;

@@ -24,6 +24,18 @@ export default {
         maxLength: 100,
       },
     },
+    {
+      name: 'position',
+      title: 'Position',
+      type: 'number',
+    },
+  ],
+  orderings: [
+    {
+      title: 'Position',
+      name: 'position',
+      by: [{ field: 'position', direction: 'asc' }],
+    },
   ],
   preview: {
     select: {

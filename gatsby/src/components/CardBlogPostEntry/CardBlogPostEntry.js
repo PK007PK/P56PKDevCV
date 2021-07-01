@@ -5,9 +5,8 @@ import Logo from 'src/components/Logo/Logo';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { CardBlogPostEntryStyles } from './CardBlogPostEntry.style';
 
-const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image, fullWidth }) => {
+const CardBlogPostEntry = ({ name, github, live, test, figma, tags, lead, image, fullWidth }) => {
     const [isOpen, setOpen] = useState(false);
-
     const picture = image ? (
         <GatsbyImage
             className="backgroundImg"
@@ -23,16 +22,19 @@ const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image, fullW
         </div>
     );
 
-    const moreInfo = (
-        <div className="logoWrapper infoWrapper">
-            <p>{lead}</p>
-        </div>
-    );
-
     const githubLink = github && (
         <a href={github} target="blank" rel="noopener noreferrer">
             GitHub
         </a>
+    );
+
+    const allTags = tags && tags.map((tag) => <p>#{tag.name}</p>);
+
+    const moreInfo = (
+        <div className="logoWrapper infoWrapper">
+            <p>{lead}</p>
+            <div className="allTags">{allTags}</div>
+        </div>
     );
 
     const liveLink = live && (
@@ -41,7 +43,7 @@ const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image, fullW
         </a>
     );
 
-    const testLink = live && (
+    const testLink = test && (
         <a
             href={`https://developers.google.com/speed/pagespeed/insights/?url=${live}&tab=desktop`}
             target="blank"

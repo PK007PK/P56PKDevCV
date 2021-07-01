@@ -5,13 +5,14 @@ import { CardFullWidthWrapperStyles } from './CardFullWidthWrapper.styles';
 const CardFullWidthWrapper = ({ data }) => (
     <CardFullWidthWrapperStyles>
         {data.allSanityBlogPosts.nodes.map((item) => {
-            const { name, github, live, figma, tags, lead, image } = item;
+            const { name, github, live, test, figma, tags, lead, image } = item;
             return (
                 <CardBlogPostEntry
                     key={name}
                     name={name}
                     github={github}
                     live={live}
+                    test={test}
                     figma={figma}
                     tags={tags}
                     lead={lead}

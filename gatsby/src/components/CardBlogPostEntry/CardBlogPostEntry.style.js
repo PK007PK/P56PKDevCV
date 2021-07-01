@@ -37,6 +37,7 @@ export const CardBlogPostEntryStyles = styled.div`
         width: 100%;
         aspect-ratio: 1920/942;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         box-shadow: ${({ theme }) => theme.elevation.dp4};
@@ -68,11 +69,21 @@ export const CardBlogPostEntryStyles = styled.div`
     .infoWrapper {
         padding: var(--spacingMedium);
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         background-color: var(--colorDark);
         text-align: center;
         color: white;
         font-size: ${({ fullWidth }) => (fullWidth ? 'var(--fontSizeBig1)' : 'var(--fontSizeLead)')};
+    }
+
+    .allTags {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: var(--fontSizeSmall);
+
+        & > *:not(:last-child) {
+            margin-right: var(--spacingRegular);
+        }
     }
 
     .linkWrapper {
