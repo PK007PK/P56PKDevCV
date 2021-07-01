@@ -6,11 +6,11 @@ export const SectionHeroStyles = styled.section`
 
     ${({ theme }) => theme.media.smAbove} {
         height: 100vh;
-        max-height: 600px;
+        max-height: 800px;
     }
 
     ${({ theme }) => theme.media.mdAbove} {
-        height: ${({ max }) => (max ? '100vh' : '85vh')};
+        height: ${({ max }) => (max ? '100vh' : '90vh')};
         max-height: 770px;
     }
 
@@ -50,16 +50,19 @@ export const SectionHeroStyles = styled.section`
         align-items: center;
     }
 
+    .categoriesFilter {
+        margin-bottom: var(--spacingRegular);
+    }
+
     .blogPagination {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        display: flex;
-        justify-content: space-between;
+        /* display: flex; */
         align-items: center;
-        z-index: 10;
         margin: var(--spacingMedium) var(--spacingSmall);
+        display: flex;
 
         ${({ theme }) => theme.media.smAbove} {
             margin: var(--spacingBig1) var(--spacingMedium);

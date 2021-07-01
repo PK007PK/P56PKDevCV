@@ -8,7 +8,7 @@ export const MenuDropDownStyles = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--colorLikeWhite);
+    background-color: var(--colorWhite);
     height: 100vh;
 
     .container {

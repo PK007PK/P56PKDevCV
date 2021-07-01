@@ -7,10 +7,12 @@ export const BlogGrid = styled.div`
     grid-template-rows: auto;
     margin-bottom: var(--spacingBig1);
 
-    ${({ theme }) => theme.media.smAbove} {
-        display: grid;
+    ${({ theme }) => theme.media.mdAbove} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    ${({ theme }) => theme.media.lgAbove} {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacingBig2);
-        grid-template-rows: auto;
     }
 `;

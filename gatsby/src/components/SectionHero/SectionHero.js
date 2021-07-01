@@ -3,6 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import SectionHeroTxtComponent from 'src/components/SectionHeroTxtComponent/SectionHeroTxtComponent';
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import FilterCategory from 'src/components/FilterCategory/FilterCategory';
+import FilterTags from 'src/components/FilterTags/FilterTags';
 import { SectionHeroStyles } from './SectionHero.styles';
 import Pagination from '../Pagination/Pagination';
 
@@ -54,7 +55,8 @@ const SectionHero = ({
                         cv={cv}
                         pdf={pdf}
                     />
-                    {blog && <FilterCategory />}
+                    {blog && <FilterCategory className="categoriesFilter" />}
+                    {blog && <FilterTags />}
                 </BootsContainer>
             </div>
             {blogPagination}

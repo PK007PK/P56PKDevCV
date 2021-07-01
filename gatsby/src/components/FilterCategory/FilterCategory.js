@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { FilterCategoryStyles } from './FilterCategory.style';
 
-export default function FilterCategory() {
+export default function FilterCategory({ className }) {
     const data = useStaticQuery(graphql`
         {
             allSanityBlogPostsCategories(sort: { order: ASC, fields: name }) {
@@ -19,7 +19,7 @@ export default function FilterCategory() {
     const categories = data.allSanityBlogPostsCategories.nodes;
 
     return (
-        <FilterCategoryStyles>
+        <FilterCategoryStyles className={className}>
             <Link to="/blog/1" activeStyle={{ color: 'red' }}>
                 <span className="name">All posts</span>
             </Link>

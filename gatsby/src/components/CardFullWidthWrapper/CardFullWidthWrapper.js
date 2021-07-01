@@ -16,6 +16,7 @@ const CardFullWidthWrapper = ({ data }) => (
                     tags={tags}
                     lead={lead}
                     image={image.asset.gatsbyImageData}
+                    fullWidth="true"
                 />
             );
         })}

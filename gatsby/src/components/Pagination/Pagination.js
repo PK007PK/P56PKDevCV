@@ -4,19 +4,17 @@ import styled from 'styled-components';
 
 const PaginationStyles = styled.div`
     margin-top: var(--spacingRegular);
-    display: flex;
 
     & > * {
         display: inline-block;
         padding: 10px;
         width: 50px;
         height: 50px;
-        margin-right: var(--spacingRegular);
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: var(--colorActive1);
-        color: black;
+        color: white;
         transition: var(--transitionBasic);
 
         &:hover,
@@ -26,6 +24,10 @@ const PaginationStyles = styled.div`
             background-color: var(--colorActive2);
             color: var(--colorWhite);
         }
+    }
+
+    & > *:not(:last-child) {
+        margin-right: var(--spacingRegular);
     }
 `;
 

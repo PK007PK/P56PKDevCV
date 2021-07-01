@@ -6,7 +6,7 @@ export const CardBlogPostEntryStyles = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 var(--spacingSmall);
+        padding: 5px var(--spacingSmall);
         background-color: var(--colorLikeWhite);
         border: 1px solid lightgray;
 
@@ -66,7 +66,13 @@ export const CardBlogPostEntryStyles = styled.div`
     }
 
     .infoWrapper {
-        align-items: flex-start;
+        padding: var(--spacingMedium);
+        align-items: center;
+        justify-content: center;
+        background-color: var(--colorDark);
+        text-align: center;
+        color: white;
+        font-size: ${({ fullWidth }) => (fullWidth ? 'var(--fontSizeBig1)' : 'var(--fontSizeLead)')};
     }
 
     .linkWrapper {

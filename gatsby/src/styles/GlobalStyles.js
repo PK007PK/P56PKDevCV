@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const colors = `
     --colorDark: #223549;
-    --colorLikeWhite: #F5F5F5;
+    --colorLikeWhite: rgba(245, 245, 245, 0.2);
     --colorGray: #CDD6DF;
     --colorActive1: #17A2B8;
     --colorActive2: #DC3545;

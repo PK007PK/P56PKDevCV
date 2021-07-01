@@ -5,7 +5,7 @@ import Logo from 'src/components/Logo/Logo';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { CardBlogPostEntryStyles } from './CardBlogPostEntry.style';
 
-const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image }) => {
+const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image, fullWidth }) => {
     const [isOpen, setOpen] = useState(false);
 
     const picture = image ? (
@@ -29,8 +29,36 @@ const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image }) => 
         </div>
     );
 
+    const githubLink = github && (
+        <a href={github} target="blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+    );
+
+    const liveLink = live && (
+        <a href={live} target="blank" rel="noopener noreferrer">
+            Live
+        </a>
+    );
+
+    const testLink = live && (
+        <a
+            href={`https://developers.google.com/speed/pagespeed/insights/?url=${live}&tab=desktop`}
+            target="blank"
+            rel="noopener noreferrer"
+        >
+            Test
+        </a>
+    );
+
+    const figmaLink = figma && (
+        <a href={figma} target="blank" rel="noopener noreferrer">
+            Figma
+        </a>
+    );
+
     return (
-        <CardBlogPostEntryStyles>
+        <CardBlogPostEntryStyles fullWidth={fullWidth}>
             <div className="titleWrapper">
                 <h3>{name}</h3>
                 <Hamburger
@@ -46,30 +74,10 @@ const CardBlogPostEntry = ({ name, github, live, figma, tags, lead, image }) => 
             {isOpen ? moreInfo : picture}
 
             <div className="linkWrapper">
-                {github && (
-                    <a href={github} target="blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
-                )}
-                {live && (
-                    <a href={live} target="blank" rel="noopener noreferrer">
-                        Live
-                    </a>
-                )}
-                {live && (
-                    <a
-                        href={`https://developers.google.com/speed/pagespeed/insights/?url=${live}&tab=desktop`}
-                        target="blank"
-                        rel="noopener noreferrer"
-                    >
-                        Test
-                    </a>
-                )}
-                {figma && (
-                    <a href={figma} target="blank" rel="noopener noreferrer">
-                        Figma
-                    </a>
-                )}
+                {githubLink}
+                {liveLink}
+                {testLink}
+                {figmaLink}
             </div>
         </CardBlogPostEntryStyles>
     );
