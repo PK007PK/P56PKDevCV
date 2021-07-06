@@ -11,6 +11,7 @@ const colors = `
 `;
 
 const spacings = `
+    --spacingXSmall: 8px;
     --spacingSmall: 15px;
     --spacingRegular: 25px;
     --spacingMedium: 40px;
@@ -54,8 +55,6 @@ html {
 body {
     padding: 0;
     margin: 0;
-    font-size: 1.5em;
-    line-height: 2;
 }
 
 a {

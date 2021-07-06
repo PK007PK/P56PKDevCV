@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 const Typography = createGlobalStyle`
   body {    
     font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
   }
 
   p, li {
@@ -15,6 +17,9 @@ const Typography = createGlobalStyle`
     margin: 0;
   }
 
+  strong {
+    font-weight: 600;
+  }
  
   h2 {
     font-size: var(--fontSizeBig2);
@@ -41,6 +46,8 @@ const Typography = createGlobalStyle`
 
   ul {
     padding: 0;
+    padding-left: 15px;
+    margin-left: 10px;
   }
 
 `;

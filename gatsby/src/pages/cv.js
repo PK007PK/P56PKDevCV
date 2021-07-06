@@ -8,6 +8,7 @@ import { CVPageGrid } from 'src/components/Grids/Grids';
 import BlockContent from '@sanity/block-content-to-react';
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import FilterTags from 'src/components/FilterTags/FilterTags';
+import CardCourseWrapper from 'src/components/CardCourseWrapper/CardCourseWrapper';
 
 const CVPage = ({ data }) => {
     const imgSrc = data.sanityCvPageData.image.asset.gatsbyImageData;
@@ -44,6 +45,7 @@ const CVPage = ({ data }) => {
                     <div className="skills">
                         <h3 className="title">Skills:</h3>
                         <FilterTags extraSlot={extraSlotData} />
+                        <CardCourseWrapper />
                     </div>
                 </CVPageGrid>
             </BootsContainer>

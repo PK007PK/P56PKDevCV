@@ -81,7 +81,6 @@ const CardBlogPostEntry = ({ name, date, github, live, test, figma, tags, lead, 
                 {date}
             </div>
             {isOpen ? moreInfo : picture}
-
             <div className="linkWrapper">
                 {githubLink}
                 {liveLink}
