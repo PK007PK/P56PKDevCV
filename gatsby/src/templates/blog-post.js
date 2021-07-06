@@ -19,7 +19,12 @@ const BlogPostTemplate = ({ data }) => {
                     <h1 itemProp="headline">{post.name}</h1>
                     <p>{post.date}</p>
                 </header>
-                <BlockContent blocks={post._rawRichText} dataset="production" url="" projectId="9311goma" />
+                <BlockContent
+                    blocks={post._rawRichText}
+                    dataset="production"
+                    url=""
+                    projectId={process.env.SANITY_PROJECT_ID}
+                />
                 <hr />
             </article>
             <nav className="blog-post-nav">

@@ -10,7 +10,7 @@ export const SectionHeroStyles = styled.section`
     }
 
     ${({ theme }) => theme.media.mdAbove} {
-        height: ${({ max }) => (max ? '100vh' : '90vh')};
+        height: ${({ max }) => (max ? '100vh' : '80vh')};
         max-height: 770px;
     }
 

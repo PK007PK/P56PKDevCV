@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const CardBlogPostEntryStyles = styled.div`
-    .titleWrapper,
     .linkWrapper {
         display: flex;
         justify-content: space-between;
@@ -16,10 +15,18 @@ export const CardBlogPostEntryStyles = styled.div`
     }
 
     .titleWrapper {
-        height: 75px;
+        background-color: var(--colorLikeWhite);
+        border: 1px solid lightgray;
+        padding: var(--spacingSmall);
 
         h3 {
             font-size: var(--fontSizeLead);
+        }
+
+        .topBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
@@ -78,6 +85,7 @@ export const CardBlogPostEntryStyles = styled.div`
 
     .allTags {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         font-size: var(--fontSizeSmall);
 

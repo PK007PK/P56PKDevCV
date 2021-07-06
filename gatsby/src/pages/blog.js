@@ -9,6 +9,7 @@ import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import projectConfig from 'src/projectConfig';
 import CardBlogPostEntryWrapper from 'src/components/CardBlogPostEntryWrapper/CardBlogPostEntryWrapper';
 import styled from 'styled-components';
+
 import Heading from '../components/Heading/Heading';
 
 const BlogPage = ({ data, pageContext }) => {
@@ -39,9 +40,7 @@ const BlogPage = ({ data, pageContext }) => {
 
     const heading = (
         <BootsContainer>
-            <Heading tag="h2">
-                {pageContext.dirName === '/blog' ? 'All posts' : pageContext.dirName.substring(1)}
-            </Heading>
+            <Heading tag="h2">{pageContext.dirName === '/blog' ? 'All posts' : pageContext.selectionName}</Heading>
         </BootsContainer>
     );
 
@@ -80,6 +79,7 @@ const BlogPage = ({ data, pageContext }) => {
                 cv={cv}
                 pdf={pdf}
                 blog="true"
+                max="true"
                 pageSize={projectConfig.pagesAmountInSet}
                 totalCount={postsToDisplay.totalCount}
                 currentPage={pageContext.currentPage || 1}

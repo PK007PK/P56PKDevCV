@@ -5,7 +5,7 @@ import Logo from 'src/components/Logo/Logo';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { CardBlogPostEntryStyles } from './CardBlogPostEntry.style';
 
-const CardBlogPostEntry = ({ name, github, live, test, figma, tags, lead, image, fullWidth }) => {
+const CardBlogPostEntry = ({ name, date, github, live, test, figma, tags, lead, image, fullWidth }) => {
     const [isOpen, setOpen] = useState(false);
     const picture = image ? (
         <GatsbyImage
@@ -28,7 +28,7 @@ const CardBlogPostEntry = ({ name, github, live, test, figma, tags, lead, image,
         </a>
     );
 
-    const allTags = tags && tags.map((tag) => <p>#{tag.name}</p>);
+    const allTags = tags && tags.map((tag) => <p key={tag.name}>#{tag.name}</p>);
 
     const moreInfo = (
         <div className="logoWrapper infoWrapper">
@@ -59,19 +59,26 @@ const CardBlogPostEntry = ({ name, github, live, test, figma, tags, lead, image,
         </a>
     );
 
+    const cardMenu = lead && (
+        <Hamburger
+            toggled={isOpen}
+            toggle={setOpen}
+            size={20}
+            duration={0.2}
+            hideOutline={false}
+            label="Show card details"
+            color="#DC3545"
+        />
+    );
+
     return (
         <CardBlogPostEntryStyles fullWidth={fullWidth}>
             <div className="titleWrapper">
-                <h3>{name}</h3>
-                <Hamburger
-                    toggled={isOpen}
-                    toggle={setOpen}
-                    size={20}
-                    duration={0.2}
-                    hideOutline={false}
-                    label="Show card details"
-                    color="#DC3545"
-                />
+                <div className="topBar">
+                    <h3>{name}</h3>
+                    {cardMenu}
+                </div>
+                {date}
             </div>
             {isOpen ? moreInfo : picture}
 

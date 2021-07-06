@@ -15,6 +15,7 @@ const CardBlogPostEntryWrapper = ({ postsToDisplay }) => (
                         .map((post) => (
                             <CardBlogPostEntry
                                 key={post.name}
+                                date={post.date}
                                 name={post.name}
                                 github={post.github}
                                 live={post.live}
