@@ -19,6 +19,7 @@ const CVPage = ({ data }) => {
             name: 'React',
         },
     ];
+
     return (
         <Layout>
             <SEO
@@ -33,6 +34,7 @@ const CVPage = ({ data }) => {
                 linkedin={linkedin}
                 cv={cv}
                 pdf={pdf}
+                max="true"
             />
             <BootsContainer>
                 <CVPageGrid>

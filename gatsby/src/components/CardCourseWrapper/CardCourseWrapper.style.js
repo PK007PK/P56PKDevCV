@@ -4,6 +4,6 @@ export const CardCourseWrapperStyles = styled.div`
     margin-top: var(--spacingMedium);
 
     & > *:not(:last-child) {
-        margin-bottom: var(--spacingBig1);
+        margin-bottom: var(--spacingRegular);
     }
 `;

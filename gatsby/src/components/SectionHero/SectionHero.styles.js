@@ -54,6 +54,12 @@ export const SectionHeroStyles = styled.section`
         margin-bottom: var(--spacingRegular);
     }
 
+    .tagsFilter {
+        ${({ theme }) => theme.media.lgAbove} {
+            width: 75%;
+        }
+    }
+
     .blogPagination {
         position: absolute;
         bottom: 0;

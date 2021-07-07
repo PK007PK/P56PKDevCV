@@ -14,7 +14,7 @@ export const SectionHeroTxtComponentStyles = styled.div`
 
     .description {
         font-size: var(--fontSizeLead);
-        line-height: 150%;
+        line-height: 200%;
         margin: 30px 0 20px 0;
 
         ${({ theme }) => theme.media.smAbove} {

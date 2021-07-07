@@ -56,7 +56,7 @@ const SectionHero = ({
                         pdf={pdf}
                     />
                     {blog && <FilterCategory className="categoriesFilter" />}
-                    {blog && <FilterTags />}
+                    {blog && <FilterTags className="tagsFilter" />}
                 </BootsContainer>
             </div>
             {blogPagination}
