@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NavbarStyles = styled.div`
-    position: absolute;
+    position: ${({ isMenuActive }) => (isMenuActive ? 'fixed' : 'absolute')};
     top: 0;
     left: 0;
     right: 0;
@@ -14,6 +14,7 @@ export const NavbarStyles = styled.div`
     ${({ theme }) => theme.media.xsAbove} {
         margin: var(--spacingMedium);
     }
+
     .logo,
     .burger {
         z-index: 10;

@@ -9,8 +9,9 @@ import MenuItemsWrapper from '../MenuItemsWrapper/MenuItemsWrapper';
 
 export default function Navbar() {
     const { toogleIsMenuActive, isMenuActive, diseableMenu } = useContext(AppContext);
+
     return (
-        <NavbarStyles>
+        <NavbarStyles isMenuActive={isMenuActive}>
             <Link to="/" className="logo" onClick={diseableMenu}>
                 <Logo />
             </Link>

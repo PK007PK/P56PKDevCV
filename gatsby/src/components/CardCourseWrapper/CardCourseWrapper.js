@@ -21,13 +21,8 @@ const CardBlogPostEntryWrapper = () => {
     return (
         <CardCourseWrapperStyles>
             <h3>Courses</h3>
-            {fixedArray.map((item) => (
-                <CardCourse
-                    key={item.courseName}
-                    courseName={item.courseName}
-                    author={item.author}
-                    platform={item.platform}
-                />
+            {fixedArray.map((item, i) => (
+                <CardCourse key={i} courseName={item.courseName} author={item.author} platform={item.platform} />
             ))}
         </CardCourseWrapperStyles>
     );
