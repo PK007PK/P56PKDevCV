@@ -29,7 +29,7 @@ const CardBlogPostEntry = React.forwardRef(
             ScrollTrigger.create({
                 trigger: wrapper,
                 animation: cardAnimation,
-                start: 'bottom bottom',
+                start: 'center bottom',
             });
         }, []);
 

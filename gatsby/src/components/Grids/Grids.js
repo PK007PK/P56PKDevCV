@@ -24,6 +24,7 @@ export const CVPageGrid = styled.div`
     grid-template-rows: auto;
     margin-bottom: var(--spacingBig1);
     align-items: start;
+
     ${({ theme }) => theme.media.mdAbove} {
         grid-template-columns: 1fr 1fr;
     }
@@ -31,6 +32,13 @@ export const CVPageGrid = styled.div`
     ${({ theme }) => theme.media.lgAbove} {
         grid-template-columns: 2fr 1fr;
         gap: var(--spacingBig2);
+    }
+
+    h2 {
+        line-height: 1.5;
+    }
+    h2:not(:first-of-type) {
+        margin: var(--spacingBig1) 0 var(--spacingRegular);
     }
 
     .skills {
