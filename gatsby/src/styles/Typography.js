@@ -45,9 +45,9 @@ const Typography = createGlobalStyle`
   }
 
   ul {
-    padding: 0;
+    /* padding: 0;
     padding-left: 15px;
-    margin-left: 10px;
+    margin-left: 10px; */
   }
 
 `;
