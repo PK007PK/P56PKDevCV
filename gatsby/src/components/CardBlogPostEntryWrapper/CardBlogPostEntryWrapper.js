@@ -12,9 +12,9 @@ const CardBlogPostEntryWrapper = ({ postsToDisplay }) => (
                 <BlogGrid>
                     {postsToDisplay.nodes
                         .filter((post) => post.date !== null)
-                        .map((post) => (
+                        .map((post, i) => (
                             <CardBlogPostEntry
-                                key={post.name}
+                                key={i}
                                 date={post.date}
                                 name={post.name}
                                 github={post.github}

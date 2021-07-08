@@ -14,11 +14,19 @@ export const SectionHeroTxtComponentStyles = styled.div`
 
     .description {
         font-size: var(--fontSizeLead);
-        line-height: 200%;
+        line-height: 150%;
         margin: 30px 0 20px 0;
 
         ${({ theme }) => theme.media.smAbove} {
-            max-width: 50%;
+            max-width: 80%;
+        }
+
+        ${({ theme }) => theme.media.mdAbove} {
+            max-width: 70%;
+        }
+
+        ${({ theme }) => theme.media.lgAbove} {
+            max-width: 60%;
         }
     }
 

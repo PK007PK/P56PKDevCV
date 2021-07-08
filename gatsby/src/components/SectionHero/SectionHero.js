@@ -57,9 +57,10 @@ const SectionHero = ({
                     />
                     {blog && <FilterCategory className="categoriesFilter" />}
                     {blog && <FilterTags className="tagsFilter" />}
+                    {blogPagination}
                 </BootsContainer>
             </div>
-            {blogPagination}
+            {/* {blogPagination} */}
         </SectionHeroStyles>
     );
 };

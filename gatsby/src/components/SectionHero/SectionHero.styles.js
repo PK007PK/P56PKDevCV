@@ -55,22 +55,19 @@ export const SectionHeroStyles = styled.section`
     }
 
     .tagsFilter {
+        ${({ theme }) => theme.media.smAbove} {
+            max-width: 90%;
+        }
+
+        ${({ theme }) => theme.media.mdAbove} {
+            max-width: 85%;
+        }
+
         ${({ theme }) => theme.media.lgAbove} {
-            width: 75%;
+            max-width: 75%;
         }
     }
 
     .blogPagination {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        align-items: center;
-        margin: var(--spacingMedium) var(--spacingSmall);
-        display: flex;
-
-        ${({ theme }) => theme.media.smAbove} {
-            margin: var(--spacingBig1) var(--spacingMedium);
-        }
     }
 `;

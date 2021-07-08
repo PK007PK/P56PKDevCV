@@ -8,14 +8,14 @@ const PaginationStyles = styled.div`
     flex-wrap: wrap;
     & > * {
         display: inline-block;
-        padding: 10px;
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--colorActive1);
-        color: white;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
         transition: var(--transitionBasic);
 
         &:hover,
@@ -24,6 +24,7 @@ const PaginationStyles = styled.div`
             box-shadow: ${({ theme }) => theme.elevationSpecial.dp8};
             background-color: var(--colorActive2);
             color: var(--colorWhite);
+            border: none;
         }
     }
 

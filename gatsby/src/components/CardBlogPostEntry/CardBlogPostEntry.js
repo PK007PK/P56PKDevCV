@@ -59,7 +59,7 @@ const CardBlogPostEntry = ({ name, date, github, live, test, figma, tags, lead, 
         </a>
     );
 
-    const cardMenu = lead && (
+    const cardBurger = lead && (
         <Hamburger
             toggled={isOpen}
             toggle={setOpen}
@@ -76,7 +76,7 @@ const CardBlogPostEntry = ({ name, date, github, live, test, figma, tags, lead, 
             <div className="titleWrapper">
                 <div className="topBar">
                     <h3>{name}</h3>
-                    {cardMenu}
+                    {cardBurger}
                 </div>
                 {date}
             </div>

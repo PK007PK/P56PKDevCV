@@ -18,6 +18,9 @@ const SectionLatestProjects = () => {
                 nodes {
                     name
                     github
+                    tags {
+                        name
+                    }
                     live
                     test
                     figma

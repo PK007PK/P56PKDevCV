@@ -50,37 +50,19 @@ export const CardBlogPostEntryStyles = styled.div`
         box-shadow: ${({ theme }) => theme.elevation.dp4};
         padding: var(--spacingRegular);
         border-bottom: 1px solid lightgray;
-        overflow-y: auto;
-
-        /* width */
-        ::-webkit-scrollbar {
-            width: 2px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: var(--colorDark);
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: var(--colorActive2);
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
     }
 
     .infoWrapper {
-        padding: var(--spacingMedium);
+        padding: var(--spacingRegular);
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         background-color: var(--colorDark);
         text-align: center;
         color: white;
-        font-size: ${({ fullWidth }) => (fullWidth ? 'var(--fontSizeBig1)' : 'var(--fontSizeLead)')};
+
+        ${({ theme }) => theme.media.smAbove} {
+            font-size: ${({ fullWidth }) => (fullWidth ? 'var(--fontSizeBig1)' : 'var(--fontSizeRegular)')};
+        }
     }
 
     .allTags {
