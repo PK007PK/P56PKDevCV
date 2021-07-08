@@ -25,7 +25,12 @@ export default function FilterCategory({ className }) {
                 <span className="name">All posts</span>
             </Link>
             {categories.map((category) => (
-                <Link to={`/${category.slug.current}/1`} activeStyle={{ color: 'red' }} key={category.slug.current}>
+                <Link
+                    to={`/${category.slug.current}/1`}
+                    partiallyActive
+                    activeStyle={{ color: 'red' }}
+                    key={category.slug.current}
+                >
                     {category.name}
                 </Link>
             ))}

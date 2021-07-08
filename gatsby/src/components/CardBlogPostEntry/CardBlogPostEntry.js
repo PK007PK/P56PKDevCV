@@ -1,94 +1,122 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Logo from 'src/components/Logo/Logo';
 import { Squeeze as Hamburger } from 'hamburger-react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap';
 import { CardBlogPostEntryStyles } from './CardBlogPostEntry.style';
 
-const CardBlogPostEntry = ({ name, date, github, live, test, figma, tags, lead, image, fullWidth }) => {
-    const [isOpen, setOpen] = useState(false);
-    const picture = image ? (
-        <GatsbyImage
-            className="backgroundImg"
-            image={image}
-            placeholder="blurred"
-            alt={name}
-            formats={['auto', 'webp']}
-            quality={50}
-        />
-    ) : (
-        <div className="logoWrapper">
-            <Logo />
-        </div>
-    );
+gsap.registerPlugin(ScrollTrigger);
 
-    const githubLink = github && (
-        <a href={github} target="blank" rel="noopener noreferrer">
-            GitHub
-        </a>
-    );
+const CardBlogPostEntry = React.forwardRef(
+    ({ name, date, github, live, test, figma, tags, lead, image, fullWidth }, ref) => {
+        const [isOpen, setOpen] = useState(false);
+        let wrapper = useRef(null);
 
-    const allTags = tags && tags.map((tag) => <p key={tag.name}>#{tag.name}</p>);
+        useEffect(() => {
+            gsap.set(wrapper, { autoAlpha: 0 });
 
-    const moreInfo = (
-        <div className="logoWrapper infoWrapper">
-            <p>{lead}</p>
-            <div className="allTags">{allTags}</div>
-        </div>
-    );
+            const cardAnimation = gsap.timeline({ defaults: { ease: 'power3.inOut' } }).fromTo(
+                wrapper,
+                { autoAlpha: 0 },
+                {
+                    duration: 0.7,
+                    autoAlpha: 1,
+                }
+            );
 
-    const liveLink = live && (
-        <a href={live} target="blank" rel="noopener noreferrer">
-            Live
-        </a>
-    );
+            ScrollTrigger.create({
+                trigger: wrapper,
+                animation: cardAnimation,
+                start: 'bottom bottom',
+            });
+        }, []);
 
-    const testLink = test && (
-        <a
-            href={`https://developers.google.com/speed/pagespeed/insights/?url=${live}&tab=desktop`}
-            target="blank"
-            rel="noopener noreferrer"
-        >
-            Test
-        </a>
-    );
+        // Create local components
+        const picture = image ? (
+            <GatsbyImage
+                className="backgroundImg"
+                image={image}
+                placeholder="blurred"
+                alt={name}
+                formats={['auto', 'webp']}
+                quality={50}
+            />
+        ) : (
+            <div className="logoWrapper">
+                <Logo />
+            </div>
+        );
 
-    const figmaLink = figma && (
-        <a href={figma} target="blank" rel="noopener noreferrer">
-            Figma
-        </a>
-    );
+        const githubLink = github && (
+            <a href={github} target="blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+        );
 
-    const cardBurger = lead && (
-        <Hamburger
-            toggled={isOpen}
-            toggle={setOpen}
-            size={20}
-            duration={0.2}
-            hideOutline={false}
-            label="Show card details"
-            color="#DC3545"
-        />
-    );
+        const allTags = tags && tags.map((tag) => <p key={tag.name}>#{tag.name}</p>);
 
-    return (
-        <CardBlogPostEntryStyles fullWidth={fullWidth}>
-            <div className="titleWrapper">
-                <div className="topBar">
-                    <h3>{name}</h3>
-                    {cardBurger}
+        const moreInfo = (
+            <div className="logoWrapper infoWrapper">
+                <p>{lead}</p>
+                <div className="allTags">{allTags}</div>
+            </div>
+        );
+
+        const liveLink = live && (
+            <a href={live} target="blank" rel="noopener noreferrer">
+                Live
+            </a>
+        );
+
+        const testLink = test && (
+            <a
+                href={`https://developers.google.com/speed/pagespeed/insights/?url=${live}&tab=desktop`}
+                target="blank"
+                rel="noopener noreferrer"
+            >
+                Test
+            </a>
+        );
+
+        const figmaLink = figma && (
+            <a href={figma} target="blank" rel="noopener noreferrer">
+                Figma
+            </a>
+        );
+
+        const cardBurger = lead && (
+            <Hamburger
+                toggled={isOpen}
+                toggle={setOpen}
+                size={20}
+                duration={0.2}
+                hideOutline={false}
+                label="Show card details"
+                color="#DC3545"
+            />
+        );
+
+        return (
+            <CardBlogPostEntryStyles fullWidth={fullWidth} ref={(el) => (wrapper = el)}>
+                <div className="titleWrapper">
+                    <div className="topBar">
+                        <h3>{name}</h3>
+                        {cardBurger}
+                    </div>
+                    {date}
                 </div>
-                {date}
-            </div>
-            {isOpen ? moreInfo : picture}
-            <div className="linkWrapper">
-                {githubLink}
-                {liveLink}
-                {testLink}
-                {figmaLink}
-            </div>
-        </CardBlogPostEntryStyles>
-    );
-};
+                {isOpen ? moreInfo : picture}
+                <div className="linkWrapper">
+                    {githubLink}
+                    {liveLink}
+                    {testLink}
+                    {figmaLink}
+                </div>
+            </CardBlogPostEntryStyles>
+        );
+    }
+);
 
 export default CardBlogPostEntry;
