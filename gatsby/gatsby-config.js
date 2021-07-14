@@ -12,7 +12,10 @@ export default {
     plugins: [
         'gatsby-plugin-root-import',
         `gatsby-plugin-image`,
-        'gatsby-plugin-styled-components',
+        {
+            resolve: 'gatsby-plugin-styled-components',
+            options: { ssr: true },
+        },
         {
             resolve: `gatsby-source-sanity`,
             options: {
