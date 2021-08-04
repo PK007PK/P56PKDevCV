@@ -10,9 +10,11 @@ import homePageData from './homePageData';
 import blogPageData from './blogPageData';
 import cvPageData from './cvPageData';
 import blogPosts from './blogPosts';
+import allCourses from './allCourses';
 import blogPostsCategories from './blogPostsCategories';
 import blogPostsTags from './blogPostsTags';
 import menuItem from './menuItem';
+import courseItem from './courseItem';
 
 export default createSchema({
   // We name our schema
@@ -24,10 +26,12 @@ export default createSchema({
     menuData,
     homePageData,
     blogPageData,
+    allCourses,
     cvPageData,
     blogPosts,
     blogPostsCategories,
     blogPostsTags,
     menuItem,
+    courseItem,
   ]),
 });

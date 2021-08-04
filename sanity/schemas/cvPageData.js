@@ -46,5 +46,11 @@ export default {
       title: 'CV PDF link',
       type: 'string',
     },
+    {
+      title: 'Rich text',
+      name: 'richText',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
+    },
   ],
 };

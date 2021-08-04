@@ -25,6 +25,11 @@ export default () =>
       S.listItem()
         .title('CV page')
         .child(S.document().schemaType('cvPageData').documentId('cvPageData')),
+      S.listItem()
+        .title('All courses')
+        .child(
+          S.document().schemaType('allMyCourses').documentId('allMyCourses')
+        ),
       ...S.documentTypeListItems().filter(
         (item) =>
           ![
@@ -33,6 +38,7 @@ export default () =>
             'homePageData',
             'blogPageData',
             'cvPageData',
+            'allMyCourses',
           ].includes(item.getId())
       ),
     ]);
