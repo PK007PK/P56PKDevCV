@@ -12,10 +12,7 @@ export default {
     plugins: [
         'gatsby-plugin-root-import',
         `gatsby-plugin-image`,
-        {
-            resolve: 'gatsby-plugin-styled-components',
-            options: { ssr: true },
-        },
+        'gatsby-plugin-styled-components',
         {
             resolve: `gatsby-source-sanity`,
             options: {
@@ -67,6 +64,13 @@ export default {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
                 trackingId: projectConfig.trackingGoogleId,
+            },
+        },
+        `gatsby-plugin-perf-budgets`,
+        {
+            resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+            options: {
+                devMode: true,
             },
         },
     ],

@@ -16,12 +16,11 @@ const CardBlogPostEntryWrapper = () => {
         }
     `);
 
-    const courses = data.sanityAllMyCourses;
-    const fixedArray = courses.menuItems.reverse();
+    const { menuItems } = data.sanityAllMyCourses;
     return (
         <CardCourseWrapperStyles>
             <h3>Courses</h3>
-            {fixedArray.map((item, i) => (
+            {menuItems.map((item, i) => (
                 <CardCourse key={i} courseName={item.courseName} author={item.author} platform={item.platform} />
             ))}
         </CardCourseWrapperStyles>

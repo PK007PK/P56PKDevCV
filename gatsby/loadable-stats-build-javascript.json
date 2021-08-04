@@ -1,0 +1,290 @@
+{
+  "hash": "2d58fa63ff73dad8f7da",
+  "publicPath": "/",
+  "outputPath": "C:\\Users\\Piotr\\Documents\\Projects\\P56PKDevCV\\gatsby",
+  "assetsByChunkName": {
+    "polyfill": [
+      "polyfill.js",
+      "polyfill.237494b95c3737e65d3e.hot-update.js"
+    ],
+    "commons": [
+      "commons.css",
+      "commons.js",
+      "commons.237494b95c3737e65d3e.hot-update.js"
+    ],
+    "component---cache-dev-404-page-js": [
+      "component---cache-dev-404-page-js.js"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js.js"
+    ],
+    "component---src-pages-blog-js": [
+      "component---src-pages-blog-js.js",
+      "component---src-pages-blog-js.237494b95c3737e65d3e.hot-update.js"
+    ],
+    "component---src-pages-cv-js": [
+      "component---src-pages-cv-js.js"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js.js",
+      "component---src-pages-index-js.237494b95c3737e65d3e.hot-update.js"
+    ],
+    "component---src-pages-test-js": [
+      "component---src-pages-test-js.js"
+    ],
+    "framework": [
+      "framework.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "assets by status",
+      "cached": true,
+      "filteredChildren": 20,
+      "size": 11035329
+    }
+  ],
+  "namedChunkGroups": {
+    "polyfill": {
+      "name": "polyfill",
+      "chunks": [
+        "polyfill"
+      ],
+      "assets": [
+        {
+          "name": "polyfill.js"
+        },
+        {
+          "name": "polyfill.237494b95c3737e65d3e.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "commons": {
+      "name": "commons",
+      "chunks": [
+        "framework",
+        "commons"
+      ],
+      "assets": [
+        {
+          "name": "framework.js"
+        },
+        {
+          "name": "commons.css"
+        },
+        {
+          "name": "commons.js"
+        },
+        {
+          "name": "commons.237494b95c3737e65d3e.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---cache-dev-404-page-js": {
+      "name": "component---cache-dev-404-page-js",
+      "chunks": [
+        "component---cache-dev-404-page-js"
+      ],
+      "assets": [
+        {
+          "name": "component---cache-dev-404-page-js.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-404-js": {
+      "name": "component---src-pages-404-js",
+      "chunks": [
+        "component---src-pages-404-js"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-404-js.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-blog-js": {
+      "name": "component---src-pages-blog-js",
+      "chunks": [
+        "component---src-pages-blog-js"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-blog-js.js"
+        },
+        {
+          "name": "component---src-pages-blog-js.237494b95c3737e65d3e.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-cv-js": {
+      "name": "component---src-pages-cv-js",
+      "chunks": [
+        "component---src-pages-cv-js"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-cv-js.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-index-js": {
+      "name": "component---src-pages-index-js",
+      "chunks": [
+        "component---src-pages-index-js"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-index-js.js"
+        },
+        {
+          "name": "component---src-pages-index-js.237494b95c3737e65d3e.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-test-js": {
+      "name": "component---src-pages-test-js",
+      "chunks": [
+        "component---src-pages-test-js"
+      ],
+      "assets": [
+        {
+          "name": "component---src-pages-test-js.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "polyfill",
+      "files": [
+        "polyfill.js",
+        "polyfill.237494b95c3737e65d3e.hot-update.js"
+      ]
+    },
+    {
+      "id": "commons",
+      "files": [
+        "commons.css",
+        "commons.js",
+        "commons.237494b95c3737e65d3e.hot-update.js"
+      ]
+    },
+    {
+      "id": "_cache_dummy_js",
+      "files": [
+        "_cache_dummy_js.js"
+      ]
+    },
+    {
+      "id": "node_modules_objectFitPolyfill_dist_objectFitPolyfill_min_js",
+      "files": [
+        "node_modules_objectFitPolyfill_dist_objectFitPolyfill_min_js.js"
+      ]
+    },
+    {
+      "id": "node_modules_gatsby-plugin-image_dist_lazy-hydrate-9f0721eb_js",
+      "files": [
+        "node_modules_gatsby-plugin-image_dist_lazy-hydrate-9f0721eb_js.js"
+      ]
+    },
+    {
+      "id": "node_modules_gatsby-plugin-image_dist_intersection-observer-6b794dd8_js",
+      "files": [
+        "node_modules_gatsby-plugin-image_dist_intersection-observer-6b794dd8_js.js"
+      ]
+    },
+    {
+      "id": "component---cache-dev-404-page-js",
+      "files": [
+        "component---cache-dev-404-page-js.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-404-js",
+      "files": [
+        "component---src-pages-404-js.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-blog-js",
+      "files": [
+        "component---src-pages-blog-js.js",
+        "component---src-pages-blog-js.237494b95c3737e65d3e.hot-update.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-cv-js",
+      "files": [
+        "component---src-pages-cv-js.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-index-js",
+      "files": [
+        "component---src-pages-index-js.js",
+        "component---src-pages-index-js.237494b95c3737e65d3e.hot-update.js"
+      ]
+    },
+    {
+      "id": "component---src-pages-test-js",
+      "files": [
+        "component---src-pages-test-js.js"
+      ]
+    },
+    {
+      "id": "framework",
+      "files": [
+        "framework.js"
+      ]
+    }
+  ]
+}
