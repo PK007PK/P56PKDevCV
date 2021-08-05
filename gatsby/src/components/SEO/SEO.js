@@ -9,18 +9,22 @@ const SEO = ({ children, location, title, image }) => {
                 title
                 description
                 lang
+                svgLogo {
+                    _rawAsset(resolveReferences: { maxDepth: 10 })
+                }
             }
         }
     `);
 
+    const svg = data.sanitySiteSettings?.svgLogo?._rawAsset?.metadata?.lqip;
+
     return (
-        <Helmet titleTemplate={`%s - ${data.sanitySiteSettings?.title || 'Title'}`}>
+        <Helmet>
             <html lang={data.sanitySiteSettings?.lang || 'en'} />
-            <title>{title}</title>
+            <title>{title || data.sanitySiteSettings?.title}</title>
 
             {/* Fav Icons */}
-            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-            <link rel="alternate icon" href="/favicon.ico" />
+            <link rel="icon" href={svg || null} type="image/svg+xml" />
 
             {/* Meta Tags */}
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,14 +33,12 @@ const SEO = ({ children, location, title, image }) => {
 
             {/* Open Graph */}
             {location && <meta property="og:url" content={location.href} />}
-            <meta property="og:image" content={image || '/logo.svg'} />
-            <meta property="og:title" content={title} key="ogtitle" />
-            <meta propery="og:site_name" content={data.sanitySiteSettings?.title || 'Title'} key="ogsitename" />
-            <meta
-                property="og:description"
-                content={data.sanitySiteSettings?.description || 'Description'}
-                key="ogdesc"
-            />
+
+            {/* <meta property="og:image" content={image || '/logo.svg'} /> */}
+            {/* <meta property="og:title" content={title} key="ogtitle" /> */}
+            <meta property="og:title" content="dfddf" key="ogtitle" />
+            <meta propery="og:site_name" content={data.sanitySiteSettings?.title} key="ogsitename" />
+            <meta property="og:description" content={data.sanitySiteSettings?.description} key="ogdesc" />
             {children}
         </Helmet>
     );

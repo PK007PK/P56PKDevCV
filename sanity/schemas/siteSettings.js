@@ -13,6 +13,15 @@ export default {
       title: 'Title',
     },
     {
+      title: 'SVG logo',
+      name: 'svgLogo',
+      type: 'image',
+      options: {
+        hotspot: true, // <-- Defaults to false
+        accept: '.svg',
+      },
+    },
+    {
       name: 'lang',
       type: 'string',
       title: 'Language',
