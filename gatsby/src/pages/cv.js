@@ -22,10 +22,7 @@ const CVPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEO
-            // title={content.frontmatter.title}
-            // description={content.frontmatter.description || content.excerpt}
-            />
+            <SEO title={title} description={description} />
             <SectionHero
                 imgSrc={imgSrc}
                 title={title}

@@ -69,6 +69,7 @@ const BlogPage = ({ data, pageContext }) => {
                 title={`Blog page ${pageContext.sellectionName ? `| ${pageContext.sellectionName}` : ''} ${
                     pageContext.currentPage ? `| ${pageContext.currentPage}` : ''
                 }`}
+                description={description}
             />
             <SectionHero
                 imgSrc={imgSrc}

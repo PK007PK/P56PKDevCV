@@ -10,9 +10,9 @@ export default {
 
     flags: { DEV_SSR: true },
     plugins: [
-        'gatsby-plugin-root-import',
+        `gatsby-plugin-root-import`,
         `gatsby-plugin-image`,
-        'gatsby-plugin-styled-components',
+        `gatsby-plugin-styled-components`,
         {
             resolve: `gatsby-source-sanity`,
             options: {
@@ -55,11 +55,11 @@ export default {
             },
         },
         `gatsby-remark-copy-linked-files`,
-        'gatsby-plugin-sharp',
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sitemap',
-        'gatsby-plugin-offline',
-        'gatsby-transformer-sharp',
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-sitemap`,
+        `gatsby-plugin-offline`,
+        `gatsby-transformer-sharp`,
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
