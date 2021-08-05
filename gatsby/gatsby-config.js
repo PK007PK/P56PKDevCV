@@ -1,11 +1,10 @@
 import dotenv from 'dotenv';
-import projectConfig from './src/projectConfig';
 
 dotenv.config({ path: '.env' });
 
 export default {
     siteMetadata: {
-        siteUrl: projectConfig.siteUrl,
+        siteUrl: process.env.SITE_URL,
     },
 
     flags: { DEV_SSR: true },
@@ -20,8 +19,8 @@ export default {
                 token: process.env.SANITY_TOKEN,
                 dataset: `production`,
                 watchMode: true,
-                apiVersion: '2021-04-01',
-                graphqlTag: 'default',
+                apiVersion: `2021-04-01`,
+                graphqlTag: `default`,
             },
         },
         {
@@ -61,14 +60,14 @@ export default {
         `gatsby-plugin-offline`,
         `gatsby-transformer-sharp`,
         {
-            resolve: 'gatsby-plugin-google-analytics',
+            resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: projectConfig.trackingGoogleId,
+                trackingId: process.env.TRACKING_GOOGLE_ID,
             },
         },
         `gatsby-plugin-perf-budgets`,
         {
-            resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+            resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
             options: {
                 devMode: true,
             },

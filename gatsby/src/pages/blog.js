@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
 import Layout from 'src/components/Layout/Layout';
 import SEO from 'src/components/SEO/SEO';
 import Pagination from 'src/components/Pagination/Pagination';
 import SectionHero from 'src/components/SectionHero/SectionHero';
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
-import projectConfig from 'src/projectConfig';
 import CardBlogPostEntryWrapper from 'src/components/CardBlogPostEntryWrapper/CardBlogPostEntryWrapper';
 import styled from 'styled-components';
 
@@ -54,7 +52,7 @@ const BlogPage = ({ data, pageContext }) => {
         <PaginationStyles>
             <Pagination
                 className="paginationBottom"
-                pageSize={projectConfig.pagesAmountInSet}
+                pageSize={process.env.PAGES_AMOUNT_INSET}
                 totalCount={postsToDisplay.totalCount}
                 currentPage={pageContext.currentPage || 1}
                 skip={pageContext.skip}
@@ -81,7 +79,7 @@ const BlogPage = ({ data, pageContext }) => {
                 pdf={pdf}
                 blog="true"
                 max="true"
-                pageSize={projectConfig.pagesAmountInSet}
+                pageSize={process.env.PAGES_AMOUNT_INSET}
                 totalCount={postsToDisplay.totalCount}
                 currentPage={pageContext.currentPage || 1}
                 skip={pageContext.skip}

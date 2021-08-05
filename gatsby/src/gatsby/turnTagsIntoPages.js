@@ -1,5 +1,4 @@
 import path from 'path';
-import projectConfig from '../projectConfig';
 
 export async function turnTagsIntoPages({ graphql, actions }) {
     // 1. Get the template
@@ -42,7 +41,7 @@ export async function turnTagsIntoPages({ graphql, actions }) {
         }
 
         const numberOfPostsInTag = await findHowManyPostsInTag();
-        const pageSize = projectConfig.pagesAmountInSet;
+        const pageSize = parseInt(process.env.PAGES_AMOUNT_INSET);
         const pageCount = Math.ceil(numberOfPostsInTag / pageSize);
 
         Array.from({ length: pageCount }).map((_, i) => {

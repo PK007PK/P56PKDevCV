@@ -1,5 +1,4 @@
 import path from 'path';
-import projectConfig from '../projectConfig';
 
 export async function turnCategoriesIntoPages({ graphql, actions }) {
     // 1. Get the template
@@ -42,7 +41,7 @@ export async function turnCategoriesIntoPages({ graphql, actions }) {
         }
 
         const numberOfPostsInCategory = await findHowManyPostsInCategory();
-        const pageSize = projectConfig.pagesAmountInSet;
+        const pageSize = parseInt(process.env.PAGES_AMOUNT_INSET);
         const numberOfPages = Math.ceil(numberOfPostsInCategory / pageSize);
 
         Array.from({ length: numberOfPages }).map((_, i) => {

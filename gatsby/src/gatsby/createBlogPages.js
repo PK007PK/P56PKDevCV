@@ -1,5 +1,4 @@
 import path from 'path';
-import projectConfig from '../projectConfig';
 
 export async function createBlogPages({ graphql, actions, reporter }) {
     // Define a template for blog post
@@ -51,7 +50,7 @@ export async function createBlogPages({ graphql, actions, reporter }) {
     // }
 
     // Create pagination
-    const pageSize = projectConfig.pagesAmountInSet;
+    const pageSize = parseInt(process.env.PAGES_AMOUNT_INSET);
     const pageCount = Math.ceil(data.allSanityBlogPosts.totalCount / pageSize);
 
     // Loop from 1 to n and create the pages for them
