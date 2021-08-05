@@ -22,6 +22,14 @@ export default {
       },
     },
     {
+      title: 'Site preview for social sharing',
+      name: 'sitePreviev',
+      type: 'image',
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
       name: 'lang',
       type: 'string',
       title: 'Language',
