@@ -1,11 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
+import loadable from '@loadable/component';
+
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-import Logo from 'src/components/Logo/Logo';
-import { Squeeze as Hamburger } from 'hamburger-react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import { Squeeze as Hamburger } from 'hamburger-react';
 import { CardBlogPostEntryStyles } from './CardBlogPostEntry.style';
+
+const Logo = loadable(() => import('src/components/Logo/Logo'));
 
 gsap.registerPlugin(ScrollTrigger);
 
