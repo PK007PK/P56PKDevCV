@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import CardBlogPostEntry from 'src/components/CardBlogPostEntry/CardBlogPostEntry';
+
 import { BlogGrid } from 'src/components/Grids/Grids.js';
+import { BootsContainer } from 'src/components/BootsElements/BootsElements';
 import { CardBlogPostEntryWrapperStyles } from './CardBlogPostEntryWrapper.style';
 
 const CardBlogPostEntryWrapper = ({ postsToDisplay }) => (

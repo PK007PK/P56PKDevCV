@@ -1,8 +1,7 @@
 import React from 'react';
 import { CardCourseStyles } from './CardCourse.styles';
 
-export default function CardCourse({ courseName, author, platform }) {
-    //
+export default function CardCourse({ courseName, author }) {
     return (
         <CardCourseStyles>
             <p className="author">{author}</p>
