@@ -1,11 +1,16 @@
 import React from 'react';
+import loadable from '@loadable/component';
+
 import { GatsbyImage } from 'gatsby-plugin-image';
-import SectionHeroTxtComponent from 'src/components/SectionHeroTxtComponent/SectionHeroTxtComponent';
 import { BootsContainer } from 'src/components/BootsElements/BootsElements';
-import FilterCategory from 'src/components/FilterCategory/FilterCategory';
-import FilterTags from 'src/components/FilterTags/FilterTags';
 import { SectionHeroStyles } from './SectionHero.styles';
-import Pagination from '../Pagination/Pagination';
+
+const SectionHeroTxtComponent = loadable(() =>
+    import('src/components/SectionHeroTxtComponent/SectionHeroTxtComponent')
+);
+const FilterCategory = loadable(() => import('src/components/FilterCategory/FilterCategory'));
+const FilterTags = loadable(() => import('src/components/FilterTags/FilterTags'));
+const Pagination = loadable(() => import('src/components/Pagination/Pagination'));
 
 const SectionHero = ({
     imgSrc,
@@ -60,7 +65,6 @@ const SectionHero = ({
                     {blogPagination}
                 </BootsContainer>
             </div>
-            {/* {blogPagination} */}
         </SectionHeroStyles>
     );
 };

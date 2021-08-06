@@ -21,7 +21,7 @@ const SEO = ({ children, location, title }) => {
 
     const svgFavicon = data.sanitySiteSettings?.svgLogo?._rawAsset?.metadata?.lqip;
     const sitePreview = data.sanitySiteSettings?.sitePreviev?._rawAsset?.url;
-    // console.log(sitePreview);
+
     return (
         <Helmet>
             <html lang={data.sanitySiteSettings?.lang || 'en'} />

@@ -1,16 +1,16 @@
 {
-  "hash": "2d58fa63ff73dad8f7da",
+  "hash": "023dfa673837d14bcfa8",
   "publicPath": "/",
   "outputPath": "C:\\Users\\Piotr\\Documents\\Projects\\P56PKDevCV\\gatsby",
   "assetsByChunkName": {
     "polyfill": [
       "polyfill.js",
-      "polyfill.237494b95c3737e65d3e.hot-update.js"
+      "polyfill.ca5eeb153807647343b8.hot-update.js"
     ],
     "commons": [
       "commons.css",
       "commons.js",
-      "commons.237494b95c3737e65d3e.hot-update.js"
+      "commons.ca5eeb153807647343b8.hot-update.js"
     ],
     "component---cache-dev-404-page-js": [
       "component---cache-dev-404-page-js.js"
@@ -20,17 +20,27 @@
     ],
     "component---src-pages-blog-js": [
       "component---src-pages-blog-js.js",
-      "component---src-pages-blog-js.237494b95c3737e65d3e.hot-update.js"
+      "component---src-pages-blog-js.ca5eeb153807647343b8.hot-update.js"
     ],
     "component---src-pages-cv-js": [
-      "component---src-pages-cv-js.js"
+      "component---src-pages-cv-js.js",
+      "component---src-pages-cv-js.ca5eeb153807647343b8.hot-update.js"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js.js",
-      "component---src-pages-index-js.237494b95c3737e65d3e.hot-update.js"
+      "component---src-pages-index-js.ca5eeb153807647343b8.hot-update.js"
     ],
-    "component---src-pages-test-js": [
-      "component---src-pages-test-js.js"
+    "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent": [
+      "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent.js"
+    ],
+    "src-components-FilterCategory-FilterCategory": [
+      "src-components-FilterCategory-FilterCategory.js"
+    ],
+    "src-components-FilterTags-FilterTags": [
+      "src-components-FilterTags-FilterTags.js"
+    ],
+    "src-components-Pagination-Pagination": [
+      "src-components-Pagination-Pagination.js"
     ],
     "framework": [
       "framework.js"
@@ -40,8 +50,8 @@
     {
       "type": "assets by status",
       "cached": true,
-      "filteredChildren": 20,
-      "size": 11035329
+      "filteredChildren": 24,
+      "size": 10183841
     }
   ],
   "namedChunkGroups": {
@@ -55,7 +65,7 @@
           "name": "polyfill.js"
         },
         {
-          "name": "polyfill.237494b95c3737e65d3e.hot-update.js"
+          "name": "polyfill.ca5eeb153807647343b8.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -82,7 +92,7 @@
           "name": "commons.js"
         },
         {
-          "name": "commons.237494b95c3737e65d3e.hot-update.js"
+          "name": "commons.ca5eeb153807647343b8.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -136,7 +146,7 @@
           "name": "component---src-pages-blog-js.js"
         },
         {
-          "name": "component---src-pages-blog-js.237494b95c3737e65d3e.hot-update.js"
+          "name": "component---src-pages-blog-js.ca5eeb153807647343b8.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -154,6 +164,9 @@
       "assets": [
         {
           "name": "component---src-pages-cv-js.js"
+        },
+        {
+          "name": "component---src-pages-cv-js.ca5eeb153807647343b8.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -173,7 +186,7 @@
           "name": "component---src-pages-index-js.js"
         },
         {
-          "name": "component---src-pages-index-js.237494b95c3737e65d3e.hot-update.js"
+          "name": "component---src-pages-index-js.ca5eeb153807647343b8.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -183,14 +196,65 @@
       "children": {},
       "childAssets": {}
     },
-    "component---src-pages-test-js": {
-      "name": "component---src-pages-test-js",
+    "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent": {
+      "name": "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent",
       "chunks": [
-        "component---src-pages-test-js"
+        "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent"
       ],
       "assets": [
         {
-          "name": "component---src-pages-test-js.js"
+          "name": "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "src-components-FilterCategory-FilterCategory": {
+      "name": "src-components-FilterCategory-FilterCategory",
+      "chunks": [
+        "src-components-FilterCategory-FilterCategory"
+      ],
+      "assets": [
+        {
+          "name": "src-components-FilterCategory-FilterCategory.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "src-components-FilterTags-FilterTags": {
+      "name": "src-components-FilterTags-FilterTags",
+      "chunks": [
+        "src-components-FilterTags-FilterTags"
+      ],
+      "assets": [
+        {
+          "name": "src-components-FilterTags-FilterTags.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "src-components-Pagination-Pagination": {
+      "name": "src-components-Pagination-Pagination",
+      "chunks": [
+        "src-components-Pagination-Pagination"
+      ],
+      "assets": [
+        {
+          "name": "src-components-Pagination-Pagination.js"
         }
       ],
       "filteredAssets": 0,
@@ -207,7 +271,7 @@
       "id": "polyfill",
       "files": [
         "polyfill.js",
-        "polyfill.237494b95c3737e65d3e.hot-update.js"
+        "polyfill.ca5eeb153807647343b8.hot-update.js"
       ]
     },
     {
@@ -215,7 +279,7 @@
       "files": [
         "commons.css",
         "commons.js",
-        "commons.237494b95c3737e65d3e.hot-update.js"
+        "commons.ca5eeb153807647343b8.hot-update.js"
       ]
     },
     {
@@ -231,9 +295,9 @@
       ]
     },
     {
-      "id": "node_modules_gatsby-plugin-image_dist_lazy-hydrate-9f0721eb_js",
+      "id": "node_modules_gatsby-plugin-image_dist_lazy-hydrate-6a6da979_js",
       "files": [
-        "node_modules_gatsby-plugin-image_dist_lazy-hydrate-9f0721eb_js.js"
+        "node_modules_gatsby-plugin-image_dist_lazy-hydrate-6a6da979_js.js"
       ]
     },
     {
@@ -258,26 +322,45 @@
       "id": "component---src-pages-blog-js",
       "files": [
         "component---src-pages-blog-js.js",
-        "component---src-pages-blog-js.237494b95c3737e65d3e.hot-update.js"
+        "component---src-pages-blog-js.ca5eeb153807647343b8.hot-update.js"
       ]
     },
     {
       "id": "component---src-pages-cv-js",
       "files": [
-        "component---src-pages-cv-js.js"
+        "component---src-pages-cv-js.js",
+        "component---src-pages-cv-js.ca5eeb153807647343b8.hot-update.js"
       ]
     },
     {
       "id": "component---src-pages-index-js",
       "files": [
         "component---src-pages-index-js.js",
-        "component---src-pages-index-js.237494b95c3737e65d3e.hot-update.js"
+        "component---src-pages-index-js.ca5eeb153807647343b8.hot-update.js"
       ]
     },
     {
-      "id": "component---src-pages-test-js",
+      "id": "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent",
       "files": [
-        "component---src-pages-test-js.js"
+        "src-components-SectionHeroTxtComponent-SectionHeroTxtComponent.js"
+      ]
+    },
+    {
+      "id": "src-components-FilterCategory-FilterCategory",
+      "files": [
+        "src-components-FilterCategory-FilterCategory.js"
+      ]
+    },
+    {
+      "id": "src-components-FilterTags-FilterTags",
+      "files": [
+        "src-components-FilterTags-FilterTags.js"
+      ]
+    },
+    {
+      "id": "src-components-Pagination-Pagination",
+      "files": [
+        "src-components-Pagination-Pagination.js"
       ]
     },
     {
