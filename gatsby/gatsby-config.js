@@ -56,7 +56,6 @@ export default {
         `gatsby-remark-copy-linked-files`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sitemap`,
         `gatsby-plugin-offline`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-perf-budgets`,
@@ -66,6 +65,7 @@ export default {
                 devMode: true,
             },
         },
+        `gatsby-plugin-sitemap`,
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
