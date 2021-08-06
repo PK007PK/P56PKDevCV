@@ -10,7 +10,6 @@ import SectionCodeWars from 'src/components/SectionCodeWars/SectionCodeWars';
 const IndexPage = ({ data }) => {
     const imgSrc = data.sanityHomePageData.image.asset.gatsbyImageData;
     const { title, description, github, linkedin, cv, pdf } = data.sanityHomePageData;
-
     return (
         <Layout>
             <SEO title={title} description={description} />
