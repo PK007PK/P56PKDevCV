@@ -59,12 +59,6 @@ export default {
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-offline`,
         `gatsby-transformer-sharp`,
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: process.env.TRACKING_GOOGLE_ID,
-            },
-        },
         `gatsby-plugin-perf-budgets`,
         {
             resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
@@ -77,7 +71,7 @@ export default {
             options: {
                 // You can add multiple tracking ids and a pageview event will be fired for all of them.
                 trackingIds: [
-                    'G-VMPZGMZJPJ', // Google Analytics / GA
+                    process.env.TRACKING_GOOGLE_ID, // Google Analytics / GA
                     // 'AW-CONVERSION_ID', // Google Ads / Adwords / AW
                     // 'DC-FLOODIGHT_ID', // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
                 ],
