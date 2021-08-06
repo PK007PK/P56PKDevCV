@@ -7,7 +7,7 @@ export default {
         siteUrl: process.env.SITE_URL,
     },
 
-    flags: { DEV_SSR: true },
+    flags: { DEV_SSR: false },
     plugins: [
         `gatsby-plugin-root-import`,
         `gatsby-plugin-loadable-components-ssr`,

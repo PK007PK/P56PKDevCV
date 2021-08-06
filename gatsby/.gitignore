@@ -8,6 +8,7 @@ public
 
 # production
 /build
+loadable-stats-build-javascript.json
 
 # misc
 .DS_Store
