@@ -41,6 +41,11 @@ export default {
       description: 'Describe your blog for search engines and social media.',
     },
     {
+      name: 'copyright',
+      type: 'string',
+      title: "Copyright's name",
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
