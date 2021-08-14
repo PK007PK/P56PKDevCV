@@ -34,15 +34,19 @@ export async function turnTagsIntoPages({ graphql, actions }) {
                 {
                   totalCount
                 }
+                sanitySiteConfig {
+                    pagesInSet
+                }
               }
             `);
             const numberOfPosts = dataWithAllPostsInTag.data.allSanityBlogPosts.totalCount;
-            return numberOfPosts;
+            const numberOfPagesInSet = dataWithAllPostsInTag.data.sanitySiteConfig.pagesInSet;
+            return { numberOfPosts, numberOfPagesInSet };
         }
 
-        const numberOfPostsInTag = await findHowManyPostsInTag();
-        const pageSize = parseInt(process.env.PAGES_AMOUNT_INSET);
-        const pageCount = Math.ceil(numberOfPostsInTag / pageSize);
+        const numberOfPostsAndPages = await findHowManyPostsInTag();
+        const pageSize = numberOfPostsAndPages.numberOfPagesInSet;
+        const pageCount = Math.ceil(numberOfPostsAndPages.numberOfPosts / pageSize);
 
         Array.from({ length: pageCount }).map((_, i) => {
             actions.createPage({

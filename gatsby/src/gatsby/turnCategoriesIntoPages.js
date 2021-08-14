@@ -34,15 +34,19 @@ export async function turnCategoriesIntoPages({ graphql, actions }) {
                             {
                                 totalCount
                             }
+                            sanitySiteConfig {
+                                pagesInSet
+                            }
                         }
                     `);
             const numberOfPosts = dataWithAllPostsInCategory.data.allSanityBlogPosts.totalCount;
-            return numberOfPosts;
+            const numberOfPagesInSet = dataWithAllPostsInCategory.data.sanitySiteConfig.pagesInSet;
+            return { numberOfPosts, numberOfPagesInSet };
         }
 
-        const numberOfPostsInCategory = await findHowManyPostsInCategory();
-        const pageSize = parseInt(process.env.PAGES_AMOUNT_INSET);
-        const numberOfPages = Math.ceil(numberOfPostsInCategory / pageSize);
+        const numberOfPostsAndPages = await findHowManyPostsInCategory();
+        const pageSize = numberOfPostsAndPages.numberOfPagesInSet;
+        const numberOfPages = Math.ceil(numberOfPostsAndPages.numberOfPosts / pageSize);
 
         Array.from({ length: numberOfPages }).map((_, i) => {
             actions.createPage({

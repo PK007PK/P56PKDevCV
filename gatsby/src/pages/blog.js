@@ -35,7 +35,7 @@ const BlogPage = ({ data, pageContext }) => {
 
     const imgSrc = data.sanityBlogPageData.image.asset.gatsbyImageData;
     const { title, description, github, linkedin, cv, pdf } = data.sanityBlogPageData;
-
+    const { pagesInSet } = data.sanitySiteConfig;
     const heading = (
         <BootsContainer>
             <Heading tag="h2">{pageContext.dirName === '/blog' ? 'All posts' : pageContext.selectionName}</Heading>
@@ -52,7 +52,7 @@ const BlogPage = ({ data, pageContext }) => {
         <PaginationStyles>
             <Pagination
                 className="paginationBottom"
-                pageSize={process.env.PAGES_AMOUNT_INSET}
+                pageSize={pagesInSet}
                 totalCount={postsToDisplay.totalCount}
                 currentPage={pageContext.currentPage || 1}
                 skip={pageContext.skip}
@@ -79,7 +79,7 @@ const BlogPage = ({ data, pageContext }) => {
                 pdf={pdf}
                 blog="true"
                 max="true"
-                pageSize={process.env.PAGES_AMOUNT_INSET}
+                pageSize={pagesInSet}
                 totalCount={postsToDisplay.totalCount}
                 currentPage={pageContext.currentPage || 1}
                 skip={pageContext.skip}
@@ -94,10 +94,8 @@ const BlogPage = ({ data, pageContext }) => {
 
 export const pageQuery = graphql`
     query pagesQuery($selectionName: String, $skip: Int = 0, $pageSize: Int) {
-        site {
-            siteMetadata {
-                title
-            }
+        sanitySiteConfig {
+            pagesInSet
         }
         sanityBlogPageData {
             image {
