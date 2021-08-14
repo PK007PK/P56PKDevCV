@@ -48,7 +48,6 @@ export async function createBlogPages({ graphql, actions, reporter }) {
     // });
     //     });
     // }
-
     // Create pagination
     const pageSize = 6;
     const pageCount = Math.ceil(data.allSanityBlogPosts.totalCount / pageSize);
