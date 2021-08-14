@@ -3,14 +3,14 @@ import { graphql, useStaticQuery } from 'gatsby';
 const useSiteConfig = () => {
     const data = useStaticQuery(graphql`
         query {
-            sanitySiteConfig {
+            sanitySiteTechConfig {
                 pagesInSet
-                siteUrl
-                googleId
+                # siteUrl
+                # googleId
             }
         }
     `);
-    return data.sanitySiteConfig;
+    return data.sanitySiteTechConfig;
 };
 
 export default useSiteConfig;

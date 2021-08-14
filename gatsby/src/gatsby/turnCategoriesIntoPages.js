@@ -34,13 +34,13 @@ export async function turnCategoriesIntoPages({ graphql, actions }) {
                             {
                                 totalCount
                             }
-                            sanitySiteConfig {
+                            sanitySiteTechConfig {
                                 pagesInSet
                             }
                         }
                     `);
             const numberOfPosts = dataWithAllPostsInCategory.data.allSanityBlogPosts.totalCount;
-            const numberOfPagesInSet = dataWithAllPostsInCategory.data.sanitySiteConfig.pagesInSet;
+            const numberOfPagesInSet = dataWithAllPostsInCategory.data.sanitySiteTechConfig.pagesInSet;
             return { numberOfPosts, numberOfPagesInSet };
         }
 

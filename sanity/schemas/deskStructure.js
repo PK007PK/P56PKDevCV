@@ -10,6 +10,11 @@ export default () =>
           S.document().schemaType('siteSettings').documentId('siteSettings')
         ),
       S.listItem()
+        .title('Site tech config')
+        .child(
+          S.document().schemaType('siteTechConfig').documentId('siteTechConfig')
+        ),
+      S.listItem()
         .title('Menu info')
         .child(S.document().schemaType('menuData').documentId('menuData')),
       S.listItem()
@@ -34,6 +39,7 @@ export default () =>
         (item) =>
           ![
             'siteSettings',
+            'siteTechConfig',
             'menuData',
             'homePageData',
             'blogPageData',
