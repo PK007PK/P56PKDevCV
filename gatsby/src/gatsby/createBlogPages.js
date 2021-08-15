@@ -17,6 +17,9 @@ export async function createBlogPages({ graphql, actions, reporter }) {
                         }
                     }
                 }
+                sanitySiteTechConfig {
+                    pagesInSet
+                }
             }
         `
     );
@@ -49,7 +52,8 @@ export async function createBlogPages({ graphql, actions, reporter }) {
     //     });
     // }
     // Create pagination
-    const pageSize = 6;
+    const pageSize = data.sanitySiteTechConfig.pagesInSet;
+    console.log(pageSize);
     const pageCount = Math.ceil(data.allSanityBlogPosts.totalCount / pageSize);
 
     // Loop from 1 to n and create the pages for them
